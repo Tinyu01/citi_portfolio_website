@@ -1,34 +1,124 @@
-/* Add your modern 2025 styling here */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #1a1a1a;
-    color: #fff;
-  }
-  
-  .hero {
-    background: linear-gradient(135deg, #00ff88, #00aaff);
-    padding: 100px 20px;
-    text-align: center;
-  }
-  
-  .cta-buttons .btn {
-    background: #00ff88;
-    color: #1a1a1a;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .card {
-    background: #2a2a2a;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Add more styles for animations, hover effects, etc. */
+  font-family: 'Poppins', sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+  padding-top: 56px; /* Offset for fixed navbar */
+}
+
+body.light-mode {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle i {
+  color: #fff;
+}
+
+.light-mode .theme-toggle i {
+  color: #333;
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #00ff88, #00aaff);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.cta-buttons .btn {
+  background: #00ff88;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Quick Links Section */
+.quick-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* About Me */
+.about-me {
+  background: linear-gradient(135deg, #00aaff, #00ff88);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Featured Projects */
+.featured-projects {
+  padding: 50px 20px;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 50px 20px;
+}
+
+/* Chatbot */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chatbot-icon {
+  background: #00ff88;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chatbot-window {
+  display: none;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+.chatbot-window.active {
+  display: block;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+}
