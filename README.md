@@ -77,9 +77,9 @@ This portfolio website is designed to showcase my skills and experience as a mul
 
 - **Address**: 1738, San Street, Braamfischerville, Roodepoort, 1724
 - **Mobile**: 0738847449
-- **Email**: ortizmal201@gmail.com
+- **Email**: masingita.maluleke@capaciti.org.za / 216135982@edu.vut.ac.za
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/thefreelancer201)
 
 ## 🌐 Live Demo
 
-[Insert Live Demo Link Here]
+[Live Demo Link](https://tinyu01.github.io/citi_portfolio_website/)

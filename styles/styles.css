@@ -15,8 +15,8 @@ body.light-mode {
 /* Theme Toggle */
 .theme-toggle {
   position: fixed;
-  top: 70px;
-  right: 20px;
+  top: 65px;
+  right: 15px;
   background: rgba(255, 255, 255, 0.1);
   border: none;
   padding: 10px;
