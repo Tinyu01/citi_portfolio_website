@@ -3,7 +3,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #1a1a1a;
   color: #fff;
-  transition: background 0.3s, color 0.3s;
   padding-top: 56px; /* Offset for fixed navbar */
 }
 
@@ -15,7 +14,6 @@ body.light-mode {
 /* Theme Toggle */
 .theme-toggle {
   position: fixed;
-  top: 65px;
   right: 15px;
   background: rgba(255, 255, 255, 0.1);
   border: none;
@@ -32,9 +30,28 @@ body.light-mode {
 .light-mode .theme-toggle i {
   color: #333;
 }
+
+/* Main Navigation */
+.navbar {
+  height: 60px;
+}
+
+.navbar .navbar-brand-p {
+  padding-left: 25px;
+}
+
+.navbar .navbar-brand {
+  padding-left: 10px;  
+}
+
+.navbar-nav .navbar-nav .nav-item {
+  color: #fff;
+
+}
+
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #00ff88, #00aaff);
+  background: linear-gradient(135deg, #9e9e4c, #3681a7);
   padding: 100px 20px;
   text-align: center;
 }
@@ -68,9 +85,15 @@ body.light-mode {
 
 /* About Me */
 .about-me {
-  background: linear-gradient(135deg, #00aaff, #00ff88);
+  background: linear-gradient(135deg, #0aa0eb, #dae4df);
   padding: 60px 20px;
   text-align: center;
+}
+
+.about-me img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
 /* Featured Projects */
