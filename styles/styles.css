@@ -3,7 +3,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #1a1a1a;
   color: #fff;
-  padding-top: 56px; /* Offset for fixed navbar */
+  padding-top: 56px;
+  /* Offset for fixed navbar */
 }
 
 body.light-mode {
@@ -41,7 +42,7 @@ body.light-mode {
 }
 
 .navbar .navbar-brand {
-  padding-left: 10px;  
+  padding-left: 10px;
 }
 
 .navbar-nav .navbar-nav .nav-item {
@@ -141,7 +142,13 @@ body.light-mode {
   margin-top: 50px;
 }
 
+.social-links {
+  background-color: white;
+  padding-inline: 50px;
+  font-size: 1.5em;
+}
+
 .social-links a {
-  color: #fff;
+  color: #271bd1;
   margin: 0 10px;
 }

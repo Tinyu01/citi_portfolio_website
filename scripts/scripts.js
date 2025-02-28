@@ -29,3 +29,9 @@ themeToggle.addEventListener('click', () => {
 // Carousel Initialization
 const projectCarousel = new bootstrap.Carousel('#projectCarousel');
 const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel');
+
+// current year
+document.addEventListener('DOMContentLoaded', (event) => {
+  const yearSpan = document.querySelector('.year');
+  yearSpan.textContent = new Date().getFullYear();
+});
