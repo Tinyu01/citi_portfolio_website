@@ -42,12 +42,21 @@ body.light-mode {
 }
 
 .navbar .navbar-brand {
+  color: #c9ccc6;
   padding-left: 10px;
 }
 
-.navbar-nav .navbar-nav .nav-item {
-  color: #fff;
+.navbar .navbar-brand:hover {
+  color: #7bff00a6;
+}
 
+.navbar .collapse {
+  padding-left: 100px;
+  color: #7bff00;
+}
+
+.navbar .collapse .nav-item:hover {
+  color: #c9ccc6;
 }
 
 /* Hero Section */
