@@ -55,6 +55,11 @@ body.light-mode {
   color: #7bff00a6;
 }
 
+.navbar .collapse .nav-item {
+  padding-right: 60px;
+  list-style-type: none;
+}
+
 .navbar .collapse .nav-item:hover {
   color: #c9ccc6;
 }
@@ -62,8 +67,12 @@ body.light-mode {
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #9e9e4c, #3681a7);
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
 }
 
 .cta-buttons .btn {
