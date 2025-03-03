@@ -209,10 +209,9 @@ body.light-mode {
 }
 
 .footer .container .social-links {
-  background: rgb(255, 255, 255); /* White background */
-  padding: 10px; /* Add padding */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  font-size: 1.5em;
+  background: rgb(255, 255, 255);
+  padding: 10px; 
+  border-radius: 8px;
 }
 
 .footer .container .social-links a i {
