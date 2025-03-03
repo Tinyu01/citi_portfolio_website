@@ -213,4 +213,10 @@ body.light-mode {
   padding: 10px; /* Add padding */
   border-radius: 8px; /* Optional: Add rounded corners */
   font-size: 1.5em;
+  margin: -10px;
+}
+
+.footer .container .social-links a {
+  color: #271bd1;
+  margin-top: -20px;
 }
