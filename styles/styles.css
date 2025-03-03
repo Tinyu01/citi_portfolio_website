@@ -208,7 +208,7 @@ body.light-mode {
   margin-top: 50px;
 }
 
-.footer .container .social-links {
+.footer .container .social-links a {
   background: rgb(255, 255, 255); /* White background */
   padding: 10px; /* Add padding */
   border-radius: 8px; /* Optional: Add rounded corners */
