@@ -197,6 +197,11 @@ body.light-mode {
   border: 1px solid #333;
 }
 
+.project-card .project-content a {
+  height: 45px;
+  text-align: center;
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
