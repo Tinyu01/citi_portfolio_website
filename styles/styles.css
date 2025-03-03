@@ -208,13 +208,13 @@ body.light-mode {
   margin-top: 50px;
 }
 
-.social-links {
+.footer .container .social-links {
   background: rgb(255, 255, 255);
   padding-left: 60px;
   font-size: 1.5em;
 }
 
-.social-links a {
+.footer .container .social-links a {
   color: #271bd1;
   margin: 0 10px;
 }
