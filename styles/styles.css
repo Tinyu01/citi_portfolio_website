@@ -152,7 +152,7 @@ body.light-mode {
   border-radius: 8px;
   height:8px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: transform 0.3s;
   background: rgb(253, 2, 2);
 }
