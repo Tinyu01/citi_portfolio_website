@@ -218,5 +218,6 @@ body.light-mode {
 
 .footer .container .social-links a {
   color: #271bd1;
-  margin-top: -40px;
+  margin-top: -60px;
+  padding: 30px;
 }
