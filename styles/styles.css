@@ -142,6 +142,10 @@ body.light-mode {
   height: 200px;
 }
 
+.about-me .container .about-content p {
+  font: 3em sans-serif;
+  font-weight: bold;
+}
 
 /* Featured Projects */
 .featured-projects {
