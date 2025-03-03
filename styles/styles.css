@@ -143,14 +143,16 @@ body.light-mode {
 }
 
 .about-me .container .about-content p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bold;
 
 }
 
 .about-me .container .about-content a {
   border-radius: 8px;
-  height: 2px;
+  height:auto;
+  font-weight: bold;
+  font-size: 1rem;
   transition: transform 0.3s;
   background: rgb(253, 2, 2);
 }
