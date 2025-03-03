@@ -101,7 +101,7 @@ body.light-mode {
 }
 
 .cta-buttons .btn:hover {
-  background: #ff0000;
+  background: #ff0000c0;
   color: white;
 }
 
