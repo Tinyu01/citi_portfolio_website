@@ -209,8 +209,8 @@ body.light-mode {
 }
 
 .social-links {
-  background-color: rgb(255, 255, 255);
-  padding-inline: 50px;
+  background: rgb(255, 255, 255);
+  padding-left: 60px;
   font-size: 1.5em;
 }
 
