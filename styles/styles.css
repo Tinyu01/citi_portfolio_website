@@ -214,6 +214,9 @@ body.light-mode {
   margin-top: -10px;
 }
 
+.footer .container p a:hover {
+color: white;
+}
 .footer .container .social-links a i {
   color: #271bd1;
 }
