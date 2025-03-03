@@ -211,6 +211,7 @@ body.light-mode {
 .footer .container .social-links {
   background: rgb(255, 255, 255);
   border-radius: 8px;
+  margin-top: -10px;
 }
 
 .footer .container .social-links a i {
