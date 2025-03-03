@@ -13,6 +13,8 @@ Welcome to my professional portfolio website! This project showcases my skills, 
 - **Discussion Board**: A forum for users to discuss topics related to my areas of expertise.
 - **Contact Page**: A styled contact form, social media links, and an embedded Google Map.
 
+  ![Portfolio Screenshot](assets/Citi_Portifolio.png)
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript, React.js
