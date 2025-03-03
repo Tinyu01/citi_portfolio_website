@@ -30,6 +30,24 @@ themeToggle.addEventListener('click', () => {
 const projectCarousel = new bootstrap.Carousel('#projectCarousel');
 const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel');
 
+// Enlarge Project Image
+document.querySelectorAll('.project-image').forEach(imageContainer => {
+  imageContainer.addEventListener('click', () => {
+    const img = imageContainer.querySelector('img');
+    const enlargedDiv = document.createElement('div');
+    enlargedDiv.classList.add('project-image', 'enlarged');
+    enlargedDiv.innerHTML = `
+      <img src="${img.src}" alt="${img.alt}">
+      <span class="close-enlarged">&times;</span>
+    `;
+    document.body.appendChild(enlargedDiv);
+
+    enlargedDiv.querySelector('.close-enlarged').addEventListener('click', () => {
+      document.body.removeChild(enlargedDiv);
+    });
+  });
+});
+
 // current year
 document.addEventListener('DOMContentLoaded', (event) => {
   const yearSpan = document.querySelector('.year');
