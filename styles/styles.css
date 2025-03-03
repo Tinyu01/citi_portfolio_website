@@ -150,6 +150,8 @@ body.light-mode {
 
 .about-me .container .about-content a {
   border-radius: 8px;
+  height: auto;
+  transition: transform 0.3s;
   background: rgb(253, 2, 2);
 }
 
