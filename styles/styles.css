@@ -145,7 +145,15 @@ body.light-mode {
 .about-me .container .about-content p {
   font-size: 1.36rem;
   font-weight: bold;
+
 }
+
+.about-me .container .about-content a {
+  border-radius: 8px;
+  background: rgb(253, 2, 2);
+}
+
+
 
 /* Featured Projects */
 .featured-projects {
