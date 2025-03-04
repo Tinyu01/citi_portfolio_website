@@ -1,39 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - MASINGITA OTTIS MALULEKE</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masingita Ottis Maluleke - Portfolio</title>
+    <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
-  <section class="about">
-    <div class="about-content">
-      <h1>About Me</h1>
-      <img src="profile.jpg" alt="MASINGITA OTTIS MALULEKE">
-      <p>Hello! I'm an IT graduate with a passion for technology...</p>
+    <div class="container">
+        <header>
+            <div class="profile-header">
+                <img src="/api/placeholder/300/300" alt="Masingita Ottis Maluleke" class="profile-photo">
+                <h1>Masingita Ottis Maluleke</h1>
+                <p class="tagline">Software Engineer | UX Designer | Graphics Designer | Database Administrator | IT Specialist | Project Manager</p>
+            </div>
+        </header>
+
+        <section id="introduction">
+            <h2>About Me</h2>
+            <p>Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
+            <p>My journey in IT has been driven by curiosity, adaptability, and a passion for solving real-world problems. With experience in IT Technician roles and internships, I've developed a strong foundation in software development, cybersecurity, project management, and database administration.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Software Development</h3>
+                    <div class="progress-bar" data-skill="React, Node.js, Python">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>UX/UI Design</h3>
+                    <div class="progress-bar" data-skill="Figma, Adobe XD, Graphic Design">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Database Administration</h3>
+                    <div class="progress-bar" data-skill="SQL, Database Management">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Cybersecurity</h3>
+                    <div class="progress-bar" data-skill="Threat Intelligence, Network Security">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Project Management</h3>
+                    <div class="progress-bar" data-skill="Agile, Scrum, Team Coordination">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>ICT Intern - Collins Chabane Local Municipality</h3>
+                        <p class="timeline-period">March 2024 - Present</p>
+                        <ul>
+                            <li>Configured and deployed new network devices</li>
+                            <li>Recommended network monitoring solution increasing uptime by 15%</li>
+                            <li>Provided technical support and resolved network issues</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Freelance Software Engineer - Maltech Digital Solutions</h3>
+                        <p class="timeline-period">March 2023 - Present</p>
+                        <ul>
+                            <li>Specialized in full-stack development using ReactJS, NodeJS, Python</li>
+                            <li>Delivered successful software projects for clients</li>
+                            <li>Managed multiple projects independently</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certification-grid">
+                <div class="certification" data-details="Cloud technologies and application development certification">
+                    <img src="/api/placeholder/100/100" alt="Cloud Application Developer">
+                    <h3>Cloud Application Developer</h3>
+                </div>
+                <div class="certification" data-details="Internet of Things cloud development certification">
+                    <img src="/api/placeholder/100/100" alt="IoT Cloud Developer">
+                    <h3>IoT Cloud Developer</h3>
+                </div>
+                <div class="certification" data-details="Cybersecurity threat intelligence course">
+                    <img src="/api/placeholder/100/100" alt="Threat Intelligence">
+                    <h3>Threat Intelligence</h3>
+                </div>
+                <div class="certification" data-details="Foundational cybersecurity course">
+                    <img src="/api/placeholder/100/100" alt="Cybersecurity Introduction">
+                    <h3>Introduction to Cybersecurity</h3>
+                </div>
+                <div class="certification" data-details="Software engineering program">
+                    <img src="/api/placeholder/100/100" alt="ALX Software Engineering">
+                    <h3>ALX Software Engineering</h3>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>📍 1738, San Street, Braamfischerville, Roodepoort, 1724</p>
+                <p>📞 0738847449</p>
+                <p>✉️ ortizmal201@gmail.com</p>
+                <a href="https://www.linkedin.com/in/thefreelancer201" target="_blank" class="linkedin-link">LinkedIn Profile</a>
+            </div>
+        </footer>
     </div>
-    <div class="skills">
-      <h2>Skills</h2>
-      <div class="skill-bar">
-        <div class="skill" data-skill="90">Software Development</div>
-        <div class="skill" data-skill="85">UX/UI Design</div>
-        <div class="skill" data-skill="80">Database Administration</div>
-      </div>
-    </div>
-    <div class="timeline">
-      <h2>Experience Timeline</h2>
-      <div class="timeline-item">
-        <h3>Collins Chabane Local Municipality</h3>
-        <p>ICT Intern - March 2024 to Present</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Maltech Digital Solutions & Co.</h3>
-        <p>Freelance Software Engineer - March 2023 to Present</p>
-      </div>
-    </div>
-  </section>
+    <script src="scripts/about.js"></script>
 </body>
 </html>
