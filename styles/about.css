@@ -35,16 +35,18 @@ header {
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--secondary-color);
+  border: 3px solid var(--secondary-color);
 }
 
 .tagline {
   color: #ecf0f1;
-  margin-top: 10px;
+  font-size: 1.1em;
+  margin-top: -15px;
+  font-weight:bold;
 }
 
 section {
@@ -53,6 +55,11 @@ section {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 4.2em;
+  font-weight: bold;
 }
 
 h2 {
