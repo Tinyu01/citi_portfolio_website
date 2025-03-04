@@ -53,3 +53,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const yearSpan = document.querySelector('.year');
   yearSpan.textContent = new Date().getFullYear();
 });
+
+// Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  if (name && email && subject && message) {
+    const mailtoLink = `mailto:216136982@edu.vut.ac.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    window.location.href = mailtoLink;
+  } else {
+    alert('Please fill in all fields.');
+  }
+});
