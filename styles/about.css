@@ -161,17 +161,65 @@ h2 {
 }
 
 footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 30px;
-  border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+/* Remove old footer styles */
+.contact-info {
+    display: none;
 }
 
 .linkedin-link {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: bold;
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
