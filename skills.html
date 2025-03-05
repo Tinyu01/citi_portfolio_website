@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASINGITA OTTIS MALULEKE | Skills & Expertise</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6C63FF;
+      --secondary: #4AC29A;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --gray: #333;
+      --card-bg: rgba(30, 30, 30, 0.7);
+      --card-hover: rgba(40, 40, 40, 0.9);
+      --text-primary: #fff;
+      --text-secondary: #aaa;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-image: linear-gradient(135deg, #121212 0%, #202020 100%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .header-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .header-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+    }
+
+    /* Particles animation */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 15s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* Categories section */
+    .categories {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      color: var(--text-primary);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .category-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .category-btn {
+      padding: 0.8rem 1.5rem;
+      background: var(--card-bg);
+      color: var(--text-primary);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(108, 99, 255, 0.1) 40%,
+        rgba(108, 99, 255, 0.1) 60%,
+        transparent 60%
+      );
+      transform: rotate(45deg);
+      z-index: 0;
+      transition: var(--transition);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      background: var(--card-hover);
+    }
+
+    .skill-card:hover::before {
+      animation: shine 1.5s infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        top: -100%;
+        left: -100%;
+      }
+      100% {
+        top: 100%;
+        left: 100%;
+      }
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .skill-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: var(--transition);
+    }
+
+    .skill-card:hover .skill-icon img {
+      transform: scale(1.1);
+    }
+
+    .skill-name {
+      font-weight: 500;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Proficiency bar only shows on hover */
+    .proficiency {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 1;
+    }
+
+    .proficiency-level {
+      height: 100%;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+      transition: var(--transition);
+      width: 0;
+    }
+
+    .skill-card:hover .proficiency {
+      opacity: 1;
+    }
+
+    .skill-card:hover .proficiency-level {
+      animation: fill-bar 1s forwards;
+    }
+
+    @keyframes fill-bar {
+      to {
+        width: var(--level);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(10, 10, 10, 0.9);
+      padding: 3rem 0;
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--card-bg);
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .social-link:hover {
+      transform: translateY(-5px);
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+    }
+
+    .footer-text {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .footer-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 3rem;
+      }
+      
+      .header-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .skill-card {
+        padding: 1.2rem 0.8rem;
+      }
+      
+      .skill-icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-title {
+        font-size: 2.5rem;
+      }
+      
+      .category-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+
+    /* Loading animation */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: var(--transition);
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-content {
+      width: 80px;
+      height: 80px;
+      position: relative;
+    }
+
+    .loader-circle {
+      width: 100%;
+      height: 100%;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/poppins/4.0.1/css/poppins.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading screen -->
+  <div class="loader">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+    </div>
+  </div>
+
+  <!-- Header section -->
+  <header>
+    <div class="particles" id="particles"></div>
+    <div class="header-content">
+      <h1 class="header-title">My Expertise & Skills</h1>
+      <p class="header-subtitle">A showcase of technologies I've mastered on my journey</p>
+      <a href="#skills" class="cta-btn">Explore My Skills</a>
+    </div>
+  </header>
+
+  <!-- Skills categories section -->
+  <section class="categories" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Proficiency</h2>
+      
+      <div class="category-container">
+        <button class="category-btn active" data-category="all">All Skills</button>
+        <button class="category-btn" data-category="programming">Programming</button>
+        <button class="category-btn" data-category="frontend">Frontend</button>
+        <button class="category-btn" data-category="backend">Backend</button>
+        <button class="category-btn" data-category="design">Design</button>
+        <button class="category-btn" data-category="tools">Tools & DevOps</button>
+      </div>
+      
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Skills will be dynamically populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">MASINGITA OTTIS MALULEKE</div>
+        
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/thefreelancer201/" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Tinyu01" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/TheFreelancer20" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        
+        <p class="footer-text">&copy; <span id="currentYear"></span> MASINGITA OTTIS MALULEKE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('.loader').classList.add('hidden');
+      }, 1000);
+    });
+
+    // Current year for footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Skills data with categories and proficiency levels
+    const skillsData = [
+      { name: "C#", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg", categories: ["programming"], level: 85 },
+      { name: "C", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg", categories: ["programming"], level: 75 },
+      { name: "Dart", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg", categories: ["programming"], level: 70 },
+      { name: "Git", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg", categories: ["tools"], level: 90 },
+      { name: "Java", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg", categories: ["programming"], level: 80 },
+      { name: "JavaScript", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg", categories: ["programming", "frontend"], level: 95 },
+      { name: "PHP", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg", categories: ["programming", "backend"], level: 75 },
+      { name: "Python", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg", categories: ["programming", "backend"], level: 85 },
+      { name: "GNU Bash", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash.svg", categories: ["tools"], level: 80 },
+      { name: "Sublime Text", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sublimetext.svg", categories: ["tools"], level: 90 },
+      { name: "Vim", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vim.svg", categories: ["tools"], level: 65 },
+      { name: "VS Code", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg", categories: ["tools"], level: 95 },
+      { name: "HTML5", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg", categories: ["frontend"], level: 100 },
+      { name: "React", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg", categories: ["frontend"], level: 90 },
+      { name: "Vue", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg", categories: ["frontend"], level: 80 },
+      { name: "jQuery", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/jquery-colored.svg", categories: ["frontend"], level: 85 },
+      { name: "CSS3", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg", categories: ["frontend"], level: 95 },
+      { name: "Bootstrap", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg", categories: ["frontend"], level: 90 },
+      { name: "Webpack", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/webpack-colored.svg", categories: ["tools", "frontend"], level: 75 },
+      { name: "NodeJS", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg", categories: ["backend"], level: 85 },
+      { name: "Express", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored-dark.svg", categories: ["backend"], level: 80 },
+      { name: "MySQL", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg", categories: ["backend"], level: 85 },
+      { name: "Oracle", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/oracle-colored.svg", categories: ["backend"], level: 70 },
+      { name: "MongoDB", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg", categories: ["backend"], level: 80 },
+      { name: "Flask", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flask-colored-dark.svg", categories: ["backend"], level: 75 },
+      { name: "Figma", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg", categories: ["design"], level: 85 },
+      { name: "Sketch", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sketch-colored.svg", categories: ["design"], level: 80 },
+      { name: "Adobe XD", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/xd-colored-dark.svg", categories: ["design"], level: 75 },
+      { name: "Premiere Pro", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/premierepro-colored-dark.svg", categories: ["design"], level: 70 },
+      { name: "After Effects", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aftereffects-colored-dark.svg", categories: ["design"], level: 65 },
+      { name: "Illustrator", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/illustrator-colored-dark.svg", categories: ["design"], level: 75 },
+      { name: "Photoshop", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored-dark.svg", categories: ["design"], level: 80 },
+      { name: "Google Cloud", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg", categories: ["tools"], level: 70 },
+      { name: "WordPress", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/wordpress-colored.svg", categories: ["tools"], level: 90 },
+      { name: "Wix", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/wix-colored.svg", categories: ["tools"], level: 85 },
+      { name: "AWS", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg", categories: ["tools"], level: 75 },
+      { name: "Arduino", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/arduino-colored.svg", categories: ["tools"], level: 60 },
+      { name: "Blender", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/blender-colored.svg", categories: ["design"], level: 65 },
+      { name: "Digital Ocean", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/digitalocean-colored.svg", categories: ["tools"], level: 70 },
+      { name: "Docker", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg", categories: ["tools"], level: 80 },
+      { name: "Linux", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg", categories: ["tools"], level: 85 },
+      { name: "MacOS", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/macos-colored-dark.svg", categories: ["tools"], level: 90 },
+      { name: "Flutter", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg", categories: ["frontend"], level: 75 },
+      { name: ".NET", icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dot-net-colored.svg", categories: ["backend"], level: 80 }
+    ];
+
+    // Populate skills grid
+    function populateSkills(category = 'all') {
+      const skillsGrid = document.getElementById('skillsGrid');
+      skillsGrid.innerHTML = '';
+      
+      const filteredSkills = category === 'all' 
+        ? skillsData 
+        : skillsData.filter(skill => skill.categories.includes(category));
+      
+      filteredSkills.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = 'skill-card';
+        
+        skillCard.innerHTML = `
+          <div class="skill-icon">
+            <img src="${skill.icon}" alt="${skill.name}">
+          </div>
+          <h3 class="skill-name">${skill.name}</h3>
+          <div class="proficiency">
+            <div class="proficiency-level" style="--level: ${skill.level}%;"></div>
+          </div>
+        `;
+        
+        skillsGrid.appendChild(skillCard);
+      });
+    }
+
+    // Category filter functionality
+    function initCategoryFilters() {
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Filter skills
+          const category = btn.getAttribute('data-category');
+          populateSkills(category);
+        });
+      });
+    }
+
+    // Create floating particles for background
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 20;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random size, position and animation delay
+        const size = Math.random() * 20 + 10;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.bottom = `-${size}px`;
+        particle.style.animationDelay = `${delay}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      populateSkills();
+      initCategoryFilters();
+      createParticles();
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
