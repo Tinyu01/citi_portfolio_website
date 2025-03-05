@@ -4,79 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - MASINGITA OTTIS MALULEKE</title>
-  <link rel="stylesheet" href="styles/portifolio.css">
+  <link rel="stylesheet" href="styles/portfolio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <h1 class="main-title">My Creative Portfolio</h1>
+      <p class="subtitle">Showcasing my professional journey and skills</p>
+    </div>
+  </header>
+
   <section class="portfolio">
-    <h1>Portfolio</h1>
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="software">Software Engineering</button>
-      <button class="filter-btn" data-filter="design">UX/Graphic Design</button>
-      <button class="filter-btn" data-filter="database">Database Administration</button>
-      <button class="filter-btn" data-filter="it">IT Specialist</button>
-      <button class="filter-btn" data-filter="management">Project Management</button>
-    </div>
-    <div class="search-bar">
-      <input type="text" id="search-input" placeholder="Search projects...">
-      <button id="search-btn"><i class="fas fa-search"></i></button>
-    </div>
-    <div class="projects-grid">
-      <!-- Software Engineering Projects -->
-      <div class="project-card" data-category="software">
-        <img src="project1.jpg" alt="Project 1">
-        <h4>E-Commerce Platform</h4>
-        <p>Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.</p>
-        <a href="https://github.com/example/ecommerce" class="btn" target="_blank">View on GitHub</a>
+    <div class="container">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="software">Software Engineering</button>
+          <button class="filter-btn" data-filter="design">UX/Graphic Design</button>
+          <button class="filter-btn" data-filter="database">Database Administration</button>
+          <button class="filter-btn" data-filter="it">IT Specialist</button>
+          <button class="filter-btn" data-filter="management">Project Management</button>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search projects...">
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
       </div>
-      <div class="project-card" data-category="software">
-        <img src="project2.jpg" alt="Project 2">
-        <h4>Task Management App</h4>
-        <p>Developed a task management app with React and Firebase. Includes real-time updates, task prioritization, and user collaboration.</p>
-        <a href="https://github.com/example/task-manager" class="btn" target="_blank">View on GitHub</a>
-      </div>
+      
+      <div class="projects-grid">
+        <!-- Software Engineering Projects -->
+        <div class="project-card" data-category="software">
+          <div class="project-image">
+            <img src="project1.jpg" alt="E-Commerce Platform">
+            <div class="project-overlay">
+              <div class="project-type">Software Engineering</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>E-Commerce Platform</h4>
+            <p>Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.</p>
+            <div class="tools-used">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fab fa-node-js"></i> Node.js</span>
+              <span><i class="fas fa-database"></i> MongoDB</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/example/ecommerce" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
 
-      <!-- UX/Graphic Design Projects -->
-      <div class="project-card" data-category="design">
-        <img src="project3.jpg" alt="Project 3">
-        <h4>Restaurant Branding</h4>
-        <p>Designed a comprehensive brand identity for a local restaurant chain, including logos, menus, and social media graphics.</p>
-        <a href="#" class="btn">View Case Study</a>
-      </div>
-      <div class="project-card" data-category="design">
-        <img src="project4.jpg" alt="Project 4">
-        <h4>E-Commerce UI/UX</h4>
-        <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user conversion.</p>
-        <a href="#" class="btn">View Case Study</a>
-      </div>
+        <div class="project-card" data-category="software">
+          <div class="project-image">
+            <img src="project2.jpg" alt="Task Management App">
+            <div class="project-overlay">
+              <div class="project-type">Software Engineering</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Task Management App</h4>
+            <p>Developed a task management app with React and Firebase. Includes real-time updates, task prioritization, and user collaboration.</p>
+            <div class="tools-used">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fas fa-server"></i> Firebase</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/example/task-manager" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
 
-      <!-- Database Administration Projects -->
-      <div class="project-card" data-category="database">   
-        <img src="project5.jpg" alt="Project 5">
-        <h4>Database Optimization</h4>
-        <p>Optimized a large-scale database system, reducing query response time by 30% and improving overall performance.</p>
-        <a href="#" class="btn">View Case Study</a>
-      </div>
+        <!-- UX/Graphic Design Projects -->
+        <div class="project-card" data-category="design">
+          <div class="project-image">
+            <img src="project3.jpg" alt="Restaurant Branding">
+            <div class="project-overlay">
+              <div class="project-type">UX/Graphic Design</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Restaurant Branding</h4>
+            <p>Designed a comprehensive brand identity for a local restaurant chain, including logos, menus, and social media graphics.</p>
+            <div class="tools-used">
+              <span><i class="fab fa-adobe"></i> Photoshop</span>
+              <span><i class="fab fa-adobe"></i> Illustrator</span>
+              <span><i class="fas fa-palette"></i> Design</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+            </div>
+          </div>
+        </div>
 
-      <!-- IT Specialist Projects -->
-      <div class="project-card" data-category="it">
-        <img src="project6.jpg" alt="Project 6">
-        <h4>Network Monitoring Solution</h4>
-        <p>Implemented a network monitoring solution for a local municipality, increasing network uptime by 15%.</p>
-        <a href="#" class="btn">View Case Study</a>
-      </div>
+        <div class="project-card" data-category="design">
+          <div class="project-image">
+            <img src="project4.jpg" alt="E-Commerce UI/UX">
+            <div class="project-overlay">
+              <div class="project-type">UX/Graphic Design</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>E-Commerce UI/UX</h4>
+            <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user conversion.</p>
+            <div class="tools-used">
+              <span><i class="fab fa-figma"></i> Figma</span>
+              <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+              <span><i class="fas fa-user-friends"></i> User Testing</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+            </div>
+          </div>
+        </div>
 
-      <!-- Project Management Projects -->
-      <div class="project-card" data-category="management">
-        <img src="project7.jpg" alt="Project 7">
-        <h4>Software Implementation</h4>
-        <p>Managed the implementation of a new software solution, improving user productivity by 10%.</p>
-        <a href="#" class="btn">View Case Study</a>
+        <!-- Database Administration Projects -->
+        <div class="project-card" data-category="database">   
+          <div class="project-image">
+            <img src="project5.jpg" alt="Database Optimization">
+            <div class="project-overlay">
+              <div class="project-type">Database Administration</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Database Optimization</h4>
+            <p>Optimized a large-scale database system, reducing query response time by 30% and improving overall performance.</p>
+            <div class="tools-used">
+              <span><i class="fas fa-database"></i> SQL</span>
+              <span><i class="fas fa-server"></i> PostgreSQL</span>
+              <span><i class="fas fa-chart-line"></i> Performance</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- IT Specialist Projects -->
+        <div class="project-card" data-category="it">
+          <div class="project-image">
+            <img src="project6.jpg" alt="Network Monitoring Solution">
+            <div class="project-overlay">
+              <div class="project-type">IT Specialist</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Network Monitoring Solution</h4>
+            <p>Implemented a network monitoring solution for a local municipality, increasing network uptime by 15%.</p>
+            <div class="tools-used">
+              <span><i class="fas fa-network-wired"></i> Networking</span>
+              <span><i class="fas fa-shield-alt"></i> Security</span>
+              <span><i class="fas fa-server"></i> Infrastructure</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Management Projects -->
+        <div class="project-card" data-category="management">
+          <div class="project-image">
+            <img src="project7.jpg" alt="Software Implementation">
+            <div class="project-overlay">
+              <div class="project-type">Project Management</div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Software Implementation</h4>
+            <p>Managed the implementation of a new software solution, improving user productivity by 10%.</p>
+            <div class="tools-used">
+              <span><i class="fas fa-tasks"></i> Agile</span>
+              <span><i class="fas fa-users"></i> Team Leadership</span>
+              <span><i class="fas fa-chart-bar"></i> Analytics</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <script src="scripts/portifolio.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 MASINGITA OTTIS MALULEKE. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay">
+    <div class="enlarged-image-container">
+      <span class="close-btn">&times;</span>
+      <img id="enlarged-image" src="" alt="Enlarged project image">
+    </div>
+  </div>
+
+  <script src="scripts/portfolio.js"></script>
 </body>
 </html>
