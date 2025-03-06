@@ -66,18 +66,23 @@ body.light-mode {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #9e9e4c, #3681a7);
+  background: linear-gradient(125deg, #bc583c, #2a80ab);
   padding: 80px 20px;
   text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .hero p {
-  font-size: 1.36rem;
+  font-size: 1rem;
   margin-top: -20px;
   font-weight: bold;
 }
@@ -91,6 +96,13 @@ body.light-mode {
   color: #02020244;
 }
 
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
 .cta-buttons .btn {
   background: #00aaff;
   color: #000000;
@@ -98,11 +110,45 @@ body.light-mode {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-buttons .btn:hover {
   background: #ff0000c0;
   color: white;
+}
+
+@media (min-width: 768px) {
+  .cta-buttons .btn {
+    padding: 12px 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-buttons .btn {
+    padding: 15px 30px;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 5.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
 }
 
 /* Quick Links Section */
@@ -701,7 +747,7 @@ body.light-mode {
 }
 
 .footer .container p a:hover {
-color: white;
+  color: white;
 }
 .footer .container .social-links a i {
   color: #271bd1;
