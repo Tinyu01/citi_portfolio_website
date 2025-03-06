@@ -1,122 +1,228 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Skill Bar Animation
-    const progressBars = document.querySelectorAll('.progress-bar .progress');
-    progressBars.forEach(bar => {
-        const width = bar.style.width;
-        bar.style.width = '0';
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 100);
+// Navigation Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.getElementById('navLinks');
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    // Open mobile menu
+    openMenu.addEventListener('click', function() {
+        navLinks.classList.add('active');
     });
 
-    // Show Subskills on Click
-    const skillBars = document.querySelectorAll('.progress-bar');
-    skillBars.forEach(bar => {
-        bar.addEventListener('click', () => {
-            const subskills = bar.getAttribute('data-skill').split(',').join(', ');
-            const skillName = bar.parentElement.querySelector('h3').textContent;
-            showSubskills(skillName, subskills);
+    // Close mobile menu
+    closeMenu.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+    });
+
+    // Close menu when clicking on a link (mobile)
+    const menuLinks = document.querySelectorAll('.nav-links ul li a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
         });
     });
 
-    // Certification Details Modal
-    const certifications = document.querySelectorAll('.certification');
-    const modal = createModal();
-
-    certifications.forEach(cert => {
-        cert.addEventListener('click', () => {
-            const details = cert.getAttribute('data-details');
-            const title = cert.querySelector('h3').textContent;
-            openModal(modal, title, details);
-        });
-    });
-
-    // Smooth Scrolling
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
-});
 
-function createModal() {
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-details"></p>
-        </div>
-    `;
-    document.body.appendChild(modal);
+    // Skills animation on scroll
+    const skillBars = document.querySelectorAll('.skill-progress');
+    const animateSkills = () => {
+        skillBars.forEach(bar => {
+            const barPosition = bar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (barPosition < screenPosition) {
+                bar.style.width = bar.style.width;
+                bar.classList.add('animated');
+            }
+        });
+    };
 
-    modal.querySelector('.close-button').addEventListener('click', () => {
+    // Add animation class on scroll
+    window.addEventListener('scroll', () => {
+        animateSkills();
+    });
+    
+    // Trigger once on load
+    animateSkills();
+
+    // Certificate modal functionality
+    const modal = document.getElementById('certModal');
+    const certDetails = document.getElementById('certDetails');
+    const closeModal = document.querySelector('.close-modal');
+    const viewButtons = document.querySelectorAll('.view-details-btn');
+
+    // Certificate details data
+    const certificationData = {
+        'Cloud Application Developer': {
+            title: 'Cloud Application Developer',
+            issuer: 'IBM',
+            issued: 'August 2023',
+            description: 'This certification validates skills in building, deploying, and managing applications on cloud platforms using microservices, containers, and serverless architectures.',
+            skills: ['Cloud Architecture', 'Microservices', 'Kubernetes', 'Docker', 'CI/CD Pipelines']
+        },
+        'IoT Cloud Developer': {
+            title: 'IoT Cloud Developer',
+            issuer: 'IBM',
+            issued: 'September 2023',
+            description: 'This certification demonstrates expertise in developing IoT solutions that connect devices to cloud platforms and analyze data for intelligent decision-making.',
+            skills: ['IoT Protocols', 'Edge Computing', 'Data Analytics', 'Cloud Integration', 'Device Management']
+        },
+        'Threat Intelligence and Hunting': {
+            title: 'Getting Started with Threat Intelligence and Hunting',
+            issuer: 'Cisco',
+            issued: 'May 2023',
+            description: 'This certification covers essential skills in identifying and responding to cyber threats through proactive threat hunting and intelligence analysis.',
+            skills: ['Threat Detection', 'Security Analysis', 'OSINT', 'Incident Response', 'Threat Modeling']
+        },
+        'Introduction to Cybersecurity': {
+            title: 'Introduction to Cybersecurity',
+            issuer: 'Cisco',
+            issued: 'March 2023',
+            description: 'This certification establishes foundational knowledge in cybersecurity concepts, including network security, cryptography, and secure software development.',
+            skills: ['Network Security', 'Cryptography', 'Security Policies', 'Risk Assessment', 'Compliance']
+        },
+        'ALX Software Engineering': {
+            title: 'ALX Software Engineering',
+            issuer: 'ALX Africa',
+            issued: 'December 2022',
+            description: 'This comprehensive program covers full-stack software engineering skills with a focus on real-world projects and collaborative development practices.',
+            skills: ['Full-stack Development', 'Algorithms', 'System Design', 'DevOps', 'Agile Methodologies']
+        }
+    };
+
+    // Open certificate modal
+    viewButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const certName = this.parentElement.getAttribute('data-cert');
+            const certData = certificationData[certName];
+            
+            if (certData) {
+                let modalContent = `
+                    <h2>${certData.title}</h2>
+                    <div class="cert-detail-item">
+                        <h4>Issuer:</h4>
+                        <p>${certData.issuer}</p>
+                    </div>
+                    <div class="cert-detail-item">
+                        <h4>Date Issued:</h4>
+                        <p>${certData.issued}</p>
+                    </div>
+                    <div class="cert-detail-item">
+                        <h4>Description:</h4>
+                        <p>${certData.description}</p>
+                    </div>
+                    <div class="cert-detail-item">
+                        <h4>Skills:</h4>
+                        <div class="cert-skills">
+                            ${certData.skills.map(skill => `<span>${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                certDetails.innerHTML = modalContent;
+                modal.style.display = 'block';
+                
+                // Add styles for the certificate skills
+                const skillElements = document.querySelectorAll('.cert-skills span');
+                skillElements.forEach(el => {
+                    el.style.display = 'inline-block';
+                    el.style.backgroundColor = '#3b82f6';
+                    el.style.color = 'white';
+                    el.style.padding = '5px 10px';
+                    el.style.borderRadius = '20px';
+                    el.style.margin = '5px';
+                    el.style.fontSize = '0.8rem';
+                });
+                
+                // Style for cert detail items
+                const detailItems = document.querySelectorAll('.cert-detail-item');
+                detailItems.forEach(item => {
+                    item.style.marginBottom = '20px';
+                });
+            }
+        });
+    });
+
+    // Close modal when clicking the X
+    closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
     });
 
-    window.addEventListener('click', (event) => {
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     });
 
-    return modal;
-}
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (name && email && subject && message) {
+                // In a real application, you would send this data to a server
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+    }
 
-function openModal(modal, title, details) {
-    modal.querySelector('#modal-title').textContent = title;
-    modal.querySelector('#modal-details').textContent = details;
-    modal.style.display = 'block';
-}
+    // Add animation to timeline items on scroll
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const animateTimeline = () => {
+        timelineItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (itemPosition < screenPosition) {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }
+        });
+    };
 
-function showSubskills(skillName, subskills) {
-    const modal = createModal();
-    openModal(modal, skillName, subskills);
-}
+    // Initialize timeline item styles
+    timelineItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.5s ease';
+    });
 
-// Add additional CSS for modal in your CSS file
-// Append this to your styles.css
-const modalCSS = `
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: black;
-}
-`;
-
-const styleElement = document.createElement('style');
-styleElement.textContent = modalCSS;
-document.head.appendChild(styleElement);
+    // Add scroll event for timeline animation
+    window.addEventListener('scroll', () => {
+        animateTimeline();
+    });
+    
+    // Trigger once on load
+    animateTimeline();
+});

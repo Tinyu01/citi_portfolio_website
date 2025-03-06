@@ -1,145 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masingita Ottis Maluleke - Portfolio</title>
-  <link rel="stylesheet" href="styles/about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Masingita Ottis Maluleke</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="container">
     <header>
-      <div class="profile-header">
-        <img src="assets/FreelanceR_Logo.png" alt="Masingita Ottis Maluleke" class="profile-photo">
-        <h1>MASINGITA OTTIS MALULEKE</h1>
-        <p class="tagline">Software Engineer | UX Designer | Graphics Designer | Database Administrator | IT Specialist
-          | Project Manager</p>
-      </div>
+        <nav>
+            <div class="logo">
+                <h1>Masingita Ottis Maluleke</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" id="openMenu"></i>
+        </nav>
     </header>
 
-    <section id="introduction">
-      <h2>About Me</h2>
-      <p>Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building secure
-        software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a
-        variety of IT needs!</p>
-      <br>
-      <p>My journey in IT has been driven by curiosity, adaptability, and a passion for solving real-world problems.
-        With experience in IT Technician roles and internships, I've developed a strong foundation in software
-        development, cybersecurity, project management, and database administration.</p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Professional Photo</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <div class="title-bar">
+                        <span>Software Engineer | UX Designer | Graphics Designer | Database Administrator | IT Specialist | Project Manager</span>
+                    </div>
+                    <p>Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
+                    <p>I have IT Technician experience and a 12-month internship, which are under my belt from a local school and the local municipality respectively! Where I immersed myself in the dynamic world of Information and Communication Technologies (ICT). Those experiences were an eye-opener, exposing me to the real-world challenges and rewards of applying IT solutions in a fast-paced environment. It ignited a passion for using technology to solve real-world problems.</p>
+                    <p>I have a strong foundation in software development, cybersecurity, project management, and database administration, it's my curiosity and adaptability that truly make me stand out. I'm a quick learner who thrives on challenges and is constantly eager to broaden my skill set. Whether it's mastering a new programming language or delving deeper into the latest security protocols, I embrace the learning curve with enthusiasm.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill">
-          <h3>Software Development</h3>
-          <div class="progress-bar" data-skill="React, Node.js, Python">
-            <div class="progress" style="width: 80%;"></div>
-          </div>
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UX/UI Design</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Figma</span>
+                        <span>Sketch</span>
+                        <span>Adobe XD</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Administration</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Threat Intelligence</span>
+                        <span>Network Security</span>
+                        <span>Encryption</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Agile</span>
+                        <span>Scrum</span>
+                        <span>JIRA</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill">
-          <h3>UX/UI Design</h3>
-          <div class="progress-bar" data-skill="Figma, Adobe XD, Graphic Design">
-            <div class="progress" style="width: 70%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Database Administration</h3>
-          <div class="progress-bar" data-skill="SQL, Database Management">
-            <div class="progress" style="width: 75%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Cybersecurity</h3>
-          <div class="progress-bar" data-skill="Threat Intelligence, Network Security">
-            <div class="progress" style="width: 65%;"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <h3>Project Management</h3>
-          <div class="progress-bar" data-skill="Agile, Scrum, Team Coordination">
-            <div class="progress" style="width: 85%;"></div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience Timeline</h2>
-      <div class="experience-container">
-        <div class="experience-card">
-          <h3>ICT Intern - Collins Chabane Local Municipality</h3>
-          <p class="timeline-period">March 2024 - Present</p>
-          <ul>
-            <li>Configured and deployed new network devices</li>
-            <li>Recommended network monitoring solution increasing uptime by 15%</li>
-            <li>Provided technical support and resolved network issues</li>
-          </ul>
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2>Experience Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>March 2024 - Present</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>ICT Intern</h3>
+                        <h4>Collins Chabane Local Municipality</h4>
+                        <p><strong>Situation:</strong> Joined the IT department to assist with maintaining and optimizing the company network.</p>
+                        <p><strong>Task:</strong> Responsible for network administration, user support, and software implementation.</p>
+                        <p><strong>Action:</strong> Configured and deployed new network devices, researched network monitoring solutions, and provided technical support.</p>
+                        <p><strong>Result:</strong> Achieved a 15% increase in network uptime and developed strong communication and teamwork skills.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>March 2023 - Present</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Freelance Software Engineer</h3>
+                        <h4>Maltech Digital Solutions & Co.</h4>
+                        <p><strong>Situation:</strong> Tasked with delivering full-stack development projects for various clients.</p>
+                        <p><strong>Task:</strong> Develop user-friendly front-ends and scalable back-end systems.</p>
+                        <p><strong>Action:</strong> Applied expertise in ReactJS, NodeJS, and Python to tackle projects independently.</p>
+                        <p><strong>Result:</strong> Successfully delivered multiple projects on time and within budget while building strong client relationships.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>August 2021 - Present</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Freelance Graphic Designer</h3>
+                        <h4>Maltech Digital Solutions & Co.</h4>
+                        <p><strong>Situation:</strong> Approached by businesses needing visual identity and digital experience design.</p>
+                        <p><strong>Task:</strong> Create branding, UI/UX designs, and marketing materials.</p>
+                        <p><strong>Action:</strong> Designed user interfaces, developed brand identity guidelines, and created social media graphics.</p>
+                        <p><strong>Result:</strong> Achieved a 15% increase in user conversion for a tech startup and 20% boost in follower engagement for an e-commerce company.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <h3>April 2022 - September 2022</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>IT Technician</h3>
+                        <h4>Mbhanyele Secondary School</h4>
+                        <p><strong>Situation:</strong> School faced numerous IT challenges requiring technical expertise.</p>
+                        <p><strong>Task:</strong> Resolve IT incidents, maintain network infrastructure, and implement new software solutions.</p>
+                        <p><strong>Action:</strong> Applied expertise in hardware repair, software troubleshooting, and network administration.</p>
+                        <p><strong>Result:</strong> Resolved over 150 critical IT incidents and increased network efficiency by 15%.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="experience-card">
-          <h3>Freelance Software Engineer - Maltech Digital Solutions</h3>
-          <p class="timeline-period">March 2023 - Present</p>
-          <ul>
-            <li>Specialized in full-stack development using ReactJS, NodeJS, Python</li>
-            <li>Delivered successful software projects for clients</li>
-            <li>Managed multiple projects independently</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="certification-grid">
-        <div class="certification" data-details="Cloud technologies and application development certification">
-          <img src="assets/cloud_application_developer.png" alt="Cloud Application Developer">
-          <h3>Cloud Application Developer</h3>
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="cert-container">
+                <div class="cert-card" data-cert="Cloud Application Developer">
+                    <div class="cert-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Application Developer</h3>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                
+                <div class="cert-card" data-cert="IoT Cloud Developer">
+                    <div class="cert-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT Cloud Developer</h3>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                
+                <div class="cert-card" data-cert="Threat Intelligence and Hunting">
+                    <div class="cert-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Getting Started with Threat Intelligence and Hunting</h3>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                
+                <div class="cert-card" data-cert="Introduction to Cybersecurity">
+                    <div class="cert-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Introduction to Cybersecurity</h3>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                
+                <div class="cert-card" data-cert="ALX Software Engineering">
+                    <div class="cert-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>ALX Software Engineering</h3>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
         </div>
-        <div class="certification" data-details="Internet of Things cloud development certification">
-          <img src="assets/iot_cloud_developer.png" alt="IoT Cloud Developer">
-          <h3>IoT Cloud Developer</h3>
-        </div>
-        <div class="certification" data-details="Cybersecurity threat intelligence course">
-          <img src="assets/threat_intelligence.png" alt="Threat Intelligence">
-          <h3>Threat Intelligence</h3>
-        </div>
-        <div class="certification" data-details="Foundational cybersecurity course">
-          <img src="assets/cybersecurity_introduction.png" alt="Cybersecurity Introduction">
-          <h3>Introduction to Cybersecurity</h3>
-        </div>
-        <div class="certification" data-details="Software engineering program">
-          <img src="assets/alx_software_engineering.png" alt="ALX Software Engineering">
-          <h3>ALX Software Engineering</h3>
-        </div>
-      </div>
     </section>
 
-    <div class="contact-form">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/{your_form_id}" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+    <div id="certModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="certDetails">
+                <!-- Certificate details will be displayed here -->
+            </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
     </div>
-    
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>1738, San Street, Braamfischerville, Roodepoort, 1724</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>0738847449</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ortizmal201@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <p>www.linkedin.com/in/thefreelancer201</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-      
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Masingita Ottis Maluleke. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="scripts/about.js"></script>
 </body>
-
 </html>
