@@ -225,4 +225,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Trigger once on load
     animateTimeline();
+
+    // Skills tab switching
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.skills-tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            this.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
+
+    // Skills slider functionality
+    const skillsSliders = document.querySelectorAll('.skills-slider');
+    skillsSliders.forEach(slider => {
+        slider.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            slider.scrollLeft += e.deltaY;
+        });
+    });
 });
