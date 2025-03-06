@@ -1,3 +1,96 @@
+/* General Styles */
+:root {
+  --primary-color: #00aaff;
+  --secondary-color: #ff0066;
+  --dark-bg: #121212;
+  --card-bg: #1a1a1a;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+  --text-dark: #000000;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  background-image: linear-gradient(135deg, #121212 0%, #202020 100%);
+  background-attachment: fixed;
+}
+
+body.light-mode {
+  background: #ffffff;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  right: 30px;
+  background: rgba(250, 250, 250, 0.607);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle i {
+  color: #fff;
+}
+
+.light-mode .theme-toggle i {
+  color: #ffffff;
+}
+
+/* Main Navigation */
+.navbar {
+  height: 60px;
+}
+
+.navbar .navbar-brand-p {
+  padding-left: 25px;
+}
+
+.navbar .navbar-brand {
+  color: #c9ccc6;
+  padding-left: 10px;
+}
+
+.navbar .navbar-brand:hover {
+  color: #7bff00a6;
+}
+
+.navbar .collapse {
+  padding-left: 100px;
+  color: #7bff00a6;
+}
+
+.navbar .collapse .nav-item {
+  padding-right: 100px;
+  list-style-type: none;
+}
+
+.navbar .collapse .nav-item:hover {
+  color: #c9ccc6;
+}
+
 /* Chatbot Container */
 .chatbot-container {
     position: fixed;
@@ -86,4 +179,36 @@
     border-radius: 5px;
     padding: 8px 12px;
     cursor: pointer;
+  }
+
+  .contact {
+    margin-top: 90px;
+  
+  }
+
+  .container h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #3a1acb;
+  }
+.col-md-6 {
+  margin-top: -1%;
+}
+  .col-md-6 .social-links {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.5rem; /* Increase the size */
+  }
+
+  .col-md-6 .social-links a {
+    margin: 0 135px; /* Add space between the links */
+  }
+
+  .col-md-6 .social-links a i {
+    transition: 0.3s;
   }

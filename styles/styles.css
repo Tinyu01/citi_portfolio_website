@@ -1,22 +1,49 @@
 /* General Styles */
+:root {
+  --primary-color: #00aaff;
+  --secondary-color: #ff0066;
+  --dark-bg: #121212;
+  --card-bg: #1a1a1a;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+  --text-dark: #000000;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #1a1a1a;
-  color: #fff;
-  padding-top: 56px;
-  /* Offset for fixed navbar */
+  background: var(--dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  background-image: linear-gradient(135deg, #121212 0%, #202020 100%);
+  background-attachment: fixed;
 }
 
 body.light-mode {
-  background: #f9f9f9;
-  color: #333;
+  background: #ffffff;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Theme Toggle */
 .theme-toggle {
   position: fixed;
   right: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(250, 250, 250, 0.607);
   border: none;
   padding: 10px;
   border-radius: 50%;
