@@ -251,3 +251,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const chatbotBody = document.getElementById("chatbot-body");
+const chatbotInput = document.getElementById("chatbot-input");
+
+// Toggle chatbot visibility
+function toggleChatbot() {
+  const chatbotWindow = document.querySelector(".chatbot-window");
+  chatbotWindow.style.display = chatbotWindow.style.display === "flex" ? "none" : "flex";
+}
+
+// Send message to LlamaCoder API
+async function sendMessage() {
+  const userMessage = chatbotInput.value.trim();
+  if (!userMessage) return;
+
+  // Add user message to chat
+  appendMessage(userMessage, "user-message");
+  chatbotInput.value = "";
+
+  // Call LlamaCoder API
+  const response = await fetch("https://api.together.ai/v1/llamacoder", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer YOUR_API_KEY`, // Replace with your API key
+    },
+    body: JSON.stringify({
+      prompt: userMessage,
+      max_tokens: 150,
+      temperature: 0.7,
+    }),
+  });
+
+  const data = await response.json();
+  const botMessage = data.choices[0].text;
+
+  // Add bot response to chat
+  appendMessage(botMessage, "bot-message");
+}
+
+// Append message to chat
+function appendMessage(message, className) {
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("chatbot-message", className);
+  messageElement.textContent = message;
+  chatbotBody.appendChild(messageElement);
+  chatbotBody.scrollTop = chatbotBody.scrollHeight; // Auto-scroll to latest message
+}

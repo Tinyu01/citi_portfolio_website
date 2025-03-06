@@ -194,6 +194,26 @@
     </div>
   </section>
 
+  <!-- Chatbot Container -->
+<div class="chatbot-container">
+  <div class="chatbot-icon" onclick="toggleChatbot()">
+    <i class="fas fa-comments"></i>
+  </div>
+  <div class="chatbot-window">
+    <div class="chatbot-header">
+      <h4>Chat with Me</h4>
+      <i class="fas fa-times close-btn" onclick="toggleChatbot()"></i>
+    </div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="chatbot-message bot-message">Hello! How can I help you today?</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatbot-input" placeholder="Type a message...">
+      <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</div>
+
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 MASINGITA OTTIS MALULEKE. All Rights Reserved.</p>
@@ -214,5 +234,6 @@
   </div>
 
   <script src="scripts/portfolio.js"></script>
+  <script src="scripts/chatbot.js"></script>
 </body>
 </html>
