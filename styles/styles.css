@@ -35,6 +35,11 @@ body.light-mode {
 /* Main Navigation */
 .navbar {
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #1a1a1a;
 }
 
 .navbar .navbar-brand-p {
@@ -51,17 +56,52 @@ body.light-mode {
 }
 
 .navbar .collapse {
-  padding-left: 100px;
+  display: flex;
+  align-items: center;
   color: #7bff00a6;
+  flex-grow: 1;
+  justify-content: space-around;
 }
 
 .navbar .collapse .nav-item {
-  padding-right: 100px;
+  padding-right: 80px;
   list-style-type: none;
 }
 
 .navbar .collapse .nav-item:hover {
   color: #c9ccc6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px;
+  }
+
+  .navbar .collapse {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+  }
+
+  .navbar .collapse .nav-item {
+    padding: 10px 20px;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar .collapse .nav-item {
+    font-size: 0.4rem;
+  }
 }
 
 /* Hero Section */
