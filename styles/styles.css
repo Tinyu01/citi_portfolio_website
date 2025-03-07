@@ -172,6 +172,16 @@ body.light-mode {
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
+  .hero {
+    background: linear-gradient(125deg, #bc583c, #2a80ab);
+    padding: 40px 10px;
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .hero h1 {
     font-size: 4.2rem;
   }
