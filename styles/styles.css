@@ -758,6 +758,8 @@ body.light-mode {
   border-radius: 10px;
   width: 120px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .skill-item img {
@@ -770,11 +772,33 @@ body.light-mode {
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
+  display: none;
+}
+
+.skill-item.active span {
+  display: block;
 }
 
 .skill-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.skill-item.active {
+  background-color: #f0f0f0; /* Example active state styling */
+  transform: scale(1.05);
+  border: 1px solid #ccc;
+}
+
+.skill-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.skill-item.active {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
 .view-all-skills {

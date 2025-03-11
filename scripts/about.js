@@ -1,3 +1,9 @@
+// current year
+document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.querySelector('.year');
+    yearSpan.textContent = new Date().getFullYear();
+  });
+  
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Init cursor effects
@@ -8,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Init particle background
     initParticleBackground();
+
+    // Initialize skill tabs functionality
+    initSkillTabs();
   });
   
   // Custom cursor effect
@@ -21,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(cursorDot);
     
     let cursorVisible = true;
-    let cursorEnlarged = false;
     
     // Hide cursor when inactive
     let mouseTimer;
@@ -50,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mouse events for interactive elements
     const interactiveElements = document.querySelectorAll('a, button, .btn, .tech-bubble');
+    let cursorEnlarged = false;
     interactiveElements.forEach(el => {
       el.addEventListener('mouseover', () => {
         cursor.classList.add('cursor-enlarged');
@@ -488,11 +497,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const highlightSpans = document.querySelectorAll('.highlight');
     highlightSpans.forEach(span => {
       span.addEventListener('mouseenter', function() {
-        this.style.color = var(--accent-color);
+        this.style.color = 'var(--accent-color)';
       });
       
       span.addEventListener('mouseleave', function() {
-        this.style.color = var(--primary-color);
+        this.style.color = 'var(--primary-color)';
       });
     });
     
@@ -1336,6 +1345,287 @@ document.addEventListener('DOMContentLoaded', function() {
     animateParticles();
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the experience section functionality
+    initExperienceSection();
+  
+    // Initialize AOS animation library if available
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+  });
+  
+  function initExperienceSection() {
+    // Create the experience data structure based on the provided HTML
+    const experienceData = [
+      {
+        year: "2024",
+        role: "ICT Intern",
+        company: "Collins Chabane Local Municipality",
+        logo: "assets/images/ccm-logo.png",
+        tags: ["Network Admin", "Technical Support", "IT Infrastructure"],
+        situation: "Joined the IT department to assist with maintaining and optimizing the municipal network infrastructure.",
+        task: "Responsible for network administration, user support, and software implementation.",
+        action: "Configured and deployed new network devices, researched network monitoring solutions, and provided technical support.",
+        result: "Achieved a 15% increase in network uptime and developed strong communication and teamwork skills."
+      },
+      {
+        year: "2023",
+        role: "Freelance Software Engineer",
+        company: "Maltech Digital Solutions & Co.",
+        logo: "assets/images/maltech-logo.png",
+        tags: ["Full-Stack", "Web Apps", "Mobile"],
+        situation: "Tasked with delivering full-stack development projects for various clients.",
+        task: "Develop user-friendly front-ends and scalable back-end systems.",
+        action: "Applied expertise in ReactJS, NodeJS, and Python to tackle projects independently.",
+        result: "Successfully delivered multiple projects on time and within budget while building strong client relationships."
+      },
+      {
+        year: "2021",
+        role: "Freelance Graphic Designer",
+        company: "Maltech Digital Solutions & Co.",
+        logo: "assets/images/maltech-logo.png",
+        tags: ["UI/UX", "Branding", "Marketing"],
+        situation: "Established as a freelance graphic designer to help businesses with their visual identity needs.",
+        task: "Create branding, UI/UX designs, and marketing materials for various clients.",
+        action: "Collaborated with businesses to design user interfaces and comprehensive brand identities.",
+        result: "Increased user conversion by 15% for a tech startup and boosted follower engagement by 20% for an e-commerce company."
+      },
+      {
+        year: "2022",
+        role: "IT Technician",
+        company: "Mbhanyele Secondary School",
+        logo: "assets/images/mbhanyele-logo.png",
+        tags: ["Hardware", "Network", "Troubleshooting"],
+        situation: "Hired to manage IT infrastructure and resolve technical issues for the school.",
+        task: "Troubleshoot and resolve IT incidents, maintain network infrastructure, and implement new software solutions.",
+        action: "Upgraded systems, leveraged expertise in hardware repair, and utilized diagnostic tools to resolve complex issues.",
+        result: "Successfully resolved over 150 critical IT incidents and increased network efficiency by 15%."
+      },
+      {
+        year: "2021",
+        role: "Education Assistant",
+        company: "Mbhanyele Secondary School",
+        logo: "assets/images/mbhanyele-logo.png", 
+        tags: ["Teaching", "Student Support", "Academic"],
+        situation: "Engaged to provide support for students from grades 8 to 12.",
+        task: "Foster a positive learning environment and provide individualized support to meet diverse student needs.",
+        action: "Developed personalized learning strategies and assisted teachers with classroom management.",
+        result: "Promoted academic success and created an engaging learning atmosphere for students."
+      }
+    ];
+  
+    // Generate the experience section HTML
+    generateExperienceSection(experienceData);
+  
+    // Initialize the experience years slider
+    initExperienceYearsSlider();
+  }
+  
+  function generateExperienceSection(experienceData) {
+    // Get the experience section element
+    const experienceSection = document.getElementById('experience');
+    
+    // Create the container if it doesn't exist
+    let container = experienceSection.querySelector('.container');
+    if (!container) {
+      container = document.createElement('div');
+      container.className = 'container';
+      experienceSection.appendChild(container);
+    }
+    
+    // Create the section header if it doesn't exist
+    let sectionHeader = container.querySelector('.section-header');
+    if (!sectionHeader) {
+      sectionHeader = document.createElement('div');
+      sectionHeader.className = 'section-header';
+      sectionHeader.setAttribute('data-aos', 'fade-up');
+      sectionHeader.innerHTML = `
+        <span class="section-tag">Professional Journey</span>
+        <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+      `;
+      container.appendChild(sectionHeader);
+    }
+    
+    // Create unique years from the experience data
+    const uniqueYears = [...new Set(experienceData.map(exp => exp.year))].sort((a, b) => b - a);
+    
+    // Create the experience navigation with years as buttons
+    const experienceNavigation = document.createElement('div');
+    experienceNavigation.className = 'experience-navigation';
+    experienceNavigation.setAttribute('data-aos', 'fade-up');
+    
+    // Create slider with prev/next arrows
+    experienceNavigation.innerHTML = `
+      <div class="slider-arrow prev"><i class="fas fa-chevron-left"></i></div>
+      <div class="experience-years">
+        ${uniqueYears.map(year => `
+          <button class="year-btn" data-year="${year}">
+            <span>${year}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="slider-arrow next"><i class="fas fa-chevron-right"></i></div>
+    `;
+    
+    container.appendChild(experienceNavigation);
+    
+    // Create the experience showcase area
+    const experienceShowcase = document.createElement('div');
+    experienceShowcase.className = 'experience-showcase';
+    
+    // Generate content for each year
+    uniqueYears.forEach((year, index) => {
+      const yearExperiences = experienceData.filter(exp => exp.year === year);
+      
+      const experienceContent = document.createElement('div');
+      experienceContent.className = `experience-content ${index === 0 ? 'active' : ''}`;
+      experienceContent.id = `experience-${year}`;
+      experienceContent.setAttribute('data-aos', 'fade-up');
+      
+      // Generate experience cards for this year
+      experienceContent.innerHTML = `
+        ${yearExperiences.map(exp => `
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="role">${exp.role}</h3>
+              <div class="company">
+                <span>${exp.company}</span>
+                <div class="company-logo">
+                  <img src="${exp.logo}" alt="${exp.company} Logo">
+                </div>
+              </div>
+              <div class="tags">
+                ${exp.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+            <div class="experience-body">
+              <div class="star-framework">
+                <div class="star-item">
+                  <span class="star-label">Situation</span>
+                  <p>${exp.situation}</p>
+                </div>
+                <div class="star-item">
+                  <span class="star-label">Task</span>
+                  <p>${exp.task}</p>
+                </div>
+                <div class="star-item">
+                  <span class="star-label">Action</span>
+                  <p>${exp.action}</p>
+                </div>
+                <div class="star-item">
+                  <span class="star-label">Result</span>
+                  <p>${exp.result}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      `;
+      
+      experienceShowcase.appendChild(experienceContent);
+    });
+    
+    container.appendChild(experienceShowcase);
+    
+    // Set up event listeners for year buttons
+    const yearButtons = experienceNavigation.querySelectorAll('.year-btn');
+    yearButtons.forEach((btn, index) => {
+      if (index === 0) btn.classList.add('active');
+      
+      btn.addEventListener('click', function() {
+        const year = this.getAttribute('data-year');
+        
+        // Remove active class from all buttons and add to clicked button
+        yearButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Hide all content and show the selected one
+        const allContent = experienceShowcase.querySelectorAll('.experience-content');
+        allContent.forEach(content => content.classList.remove('active'));
+        
+        const selectedContent = document.getElementById(`experience-${year}`);
+        selectedContent.classList.add('active');
+      });
+    });
+  }
+  
+  function initExperienceYearsSlider() {
+    const sliderContainer = document.querySelector('.experience-years');
+    const prevArrow = document.querySelector('.slider-arrow.prev');
+    const nextArrow = document.querySelector('.slider-arrow.next');
+    
+    if (!sliderContainer || !prevArrow || !nextArrow) return;
+    
+    // Function to scroll the slider
+    const scrollSlider = (direction) => {
+      const scrollAmount = sliderContainer.offsetWidth * 0.7;
+      if (direction === 'prev') {
+        sliderContainer.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      } else {
+        sliderContainer.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    };
+    
+    // Add click event listeners to arrows
+    prevArrow.addEventListener('click', () => scrollSlider('prev'));
+    nextArrow.addEventListener('click', () => scrollSlider('next'));
+    
+    // Add hover effect to experience cards
+    const experienceCards = document.querySelectorAll('.experience-card');
+    experienceCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.classList.add('hovered');
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.classList.remove('hovered');
+      });
+    });
+  }
+  
+  // Add some extras to enhance the experience
+  function enhanceUserExperience() {
+    // Add subtle parallax effect to the background
+    window.addEventListener('mousemove', function(e) {
+      const experienceSection = document.querySelector('.experience-section');
+      if (!experienceSection) return;
+      
+      const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+      const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+      
+      experienceSection.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+    });
+    
+    // Add smooth hover transitions to cards
+    const experienceCards = document.querySelectorAll('.experience-card');
+    experienceCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        const header = this.querySelector('.experience-header');
+        header.style.height = '180px';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        const header = this.querySelector('.experience-header');
+        header.style.height = '';
+      });
+    });
+  }
+  
+  // Call the enhance function when the page is fully loaded
+  window.addEventListener('load', enhanceUserExperience);
+
   // JavaScript for Certifications Section
 document.addEventListener('DOMContentLoaded', function() {
     // Certification data - can be expanded with your actual certifications
@@ -2093,3 +2383,27 @@ document.addEventListener('DOMContentLoaded', function() {
       document.head.appendChild(style);
     }
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize skill tabs functionality
+    initSkillTabs();
+});
+
+function initSkillTabs() {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    skillItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Close all other skill items
+            skillItems.forEach(skill => {
+                if (skill !== item) {
+                    skill.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked skill item
+            item.classList.toggle('active');
+        });
+    });
+}
+
