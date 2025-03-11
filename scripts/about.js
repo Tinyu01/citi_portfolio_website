@@ -271,47 +271,31 @@ async function sendMessage() {
   chatbotInput.value = "";
 
   // Call LlamaCoder API
-  callLlamaCoderAPI(userMessage);
-}
+  const response = await fetch("https://api.together.ai/v1/llamacoder", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer YOUR_API_KEY`, // Replace with your API key
+    },
+    body: JSON.stringify({
+      prompt: userMessage,
+      max_tokens: 150,
+      temperature: 0.7,
+    }),
+  });
 
-async function callLlamaCoderAPI(userMessage) {
-    try {
-        const response = await fetch("https://llamacoder.together.ai/share/v2/93nkP6BMZyASpHgF", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer 0d2890a11cc1a73bead868c4f8c5738bcf78602d33c511a7d6c2b99ebaf6d680`, // Updated API key
-            },
-            body: JSON.stringify({
-                prompt: userMessage,
-                max_tokens: 150,
-                temperature: 0.7,
-            }),
-        });
+  const data = await response.json();
+  const botMessage = data.choices[0].text;
 
-        if (!response.ok) {
-            console.error(`HTTP error! status: ${response.status}`);
-            console.error("Response:", await response.text()); // Log the response text for debugging
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("API response data:", data); // Log the response data for debugging
-        const botMessage = data.choices[0].text.trim(); // Correct path to the response text
-
-        // Add bot response to chat
-        appendMessage(botMessage, "bot-message");
-    } catch (error) {
-        console.error("Error connecting to LlamaCoder API:", error);
-        appendMessage("Sorry, there was an error connecting to the chatbot service.", "error-message");
-    }
+  // Add bot response to chat
+  appendMessage(botMessage, "bot-message");
 }
 
 // Append message to chat
 function appendMessage(message, className) {
-    const messageElement = document.createElement("div");
-    messageElement.classList.add("chatbot-message", className);
-    messageElement.textContent = message;
-    chatbotBody.appendChild(messageElement);
-    chatbotBody.scrollTop = chatbotBody.scrollHeight; // Auto-scroll to latest message
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("chatbot-message", className);
+  messageElement.textContent = message;
+  chatbotBody.appendChild(messageElement);
+  chatbotBody.scrollTop = chatbotBody.scrollHeight; // Auto-scroll to latest message
 }
