@@ -176,7 +176,7 @@ body.light-mode {
     background: linear-gradient(125deg, #bc583c, #2a80ab);
     padding: 40px 10px;
     text-align: center;
-    height: 30vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
