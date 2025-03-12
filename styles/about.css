@@ -1756,13 +1756,15 @@ body {
   align-items: center;
   gap: 20px;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
   padding: 10px 40px;
   position: relative;
 }
 
 .experience-years::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
 .year-btn {
@@ -2011,34 +2013,34 @@ body {
   .experience-section {
     padding: 80px 0;
   }
-  
+
   .section-title {
     font-size: 28px;
   }
-  
+
   .year-btn {
     min-width: 100px;
     padding: 12px 15px;
     font-size: 16px;
   }
-  
+
   .experience-header {
     padding: 20px;
   }
-  
+
   .role {
     font-size: 20px;
   }
-  
+
   .company span {
     font-size: 16px;
   }
-  
+
   .company-logo {
     width: 50px;
     height: 50px;
   }
-  
+
   .experience-body {
     padding: 20px;
   }
@@ -2050,6 +2052,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -3096,6 +3099,7 @@ body.dark-theme .social-link {
   }
 
   .footer-bottom .social-links {
+    padding-left: 30px;
     margin-top: 1rem;
     justify-content: center;
   }
@@ -3113,8 +3117,9 @@ body.dark-theme .social-link {
 }
 
 .footer-bottom .container p a {
-  color:rgba(76, 201, 240, 0.7);
+  color: rgba(76, 201, 240, 0.7);
 }
+
 .footer-bottom .container p a:hover {
   color: #0400ff;
 }
