@@ -3097,7 +3097,9 @@ body.dark-theme .social-link {
   .footer-bottom {
     text-align: center;
   }
-
+.footer-bottom .container p{
+    font-size: 0.8em;
+  }
   .footer-bottom .social-links {
     padding-left: 30px;
     margin-top: 1rem;
