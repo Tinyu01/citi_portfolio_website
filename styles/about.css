@@ -2542,6 +2542,8 @@ body {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .social-link {
@@ -2831,6 +2833,7 @@ body.dark-theme .social-link {
     margin-bottom: 0;
   }
 }
+
 
 .logo {
   margin-bottom: 1rem;
