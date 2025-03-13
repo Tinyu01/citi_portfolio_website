@@ -190,53 +190,133 @@
   <div class="background-particles"></div>
 </section>
 
-  <!-- Skills and Technologies -->
-  <section class="skills">
-    <div class="container">
-      <h2>Skills and Technologies</h2>
-      <div class="skills-grid">
-        <div class="skill-item" data-skill="javascript">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg"
-            alt="JavaScript">
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-item" data-skill="python">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg"
-            alt="Python">
-          <span>Python</span>
-        </div>
-        <div class="skill-item" data-skill="react">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg"
-            alt="React">
-          <span>React</span>
-        </div>
-        <div class="skill-item" data-skill="nodejs">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg"
-            alt="NodeJS">
-          <span>NodeJS</span>
-        </div>
-        <div class="skill-item" data-skill="aws">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg"
-            alt="Amazon Web Services">
-          <span>Amazon Web Services</span>
-        </div>
-        <div class="skill-item" data-skill="docker">
-          <img
-            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg"
-            alt="Docker">
-          <span>Docker</span>
+ <!-- Skills and Technologies -->
+<section class="skills">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="title-decoration"></div>
+    </div>
+    
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="devops">DevOps</button>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-item" data-skill="javascript" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JavaScript">
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="view-all-skills">
-        <a href="skills.html" class="btn">View All Skills</a>
+      
+      <div class="skill-item" data-skill="python" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python">
+          </div>
+          <div class="skill-info">
+            <h3>Python</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-item" data-skill="react" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React">
+          </div>
+          <div class="skill-info">
+            <h3>React</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 88%"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-item" data-skill="nodejs" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="NodeJS">
+          </div>
+          <div class="skill-info">
+            <h3>NodeJS</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 82%"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-item" data-skill="aws" data-category="devops">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg" alt="Amazon Web Services">
+          </div>
+          <div class="skill-info">
+            <h3>AWS</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 78%"></div>
+              </div>
+              <span class="level-text">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-item" data-skill="docker" data-category="devops">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker">
+          </div>
+          <div class="skill-info">
+            <h3>Docker</h3>
+            <div class="skill-level">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <span class="level-text">Intermediate</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+    
+    <div class="view-all-skills">
+      <a href="skills.html" class="btn btn-primary">
+        <span>View All Skills</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Featured Projects -->
   <section id="portfolio" class="featured-projects">
