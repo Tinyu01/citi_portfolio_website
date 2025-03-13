@@ -19,15 +19,15 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="https://tinyu01.github.io/citi_portfolio_website/">
         <img src="assets/FreelanceR_Logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
-        <span>THE FREELANCER</span>
+        <span>MASINGITA OTTIS MALULEKE</span>
       </a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-      </button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+      </button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -42,55 +42,142 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="container">
     <div class="hero-content">
-      <h1 class="animate__animated animate__bounceIn">
-        MASINGITA OTTIS MALULEKE
-      </h1>
-      <p class="animate__animated animate__lightSpeedInLeft">
-        Software Engineer | UX Designer | Graphics Designer | Database Administrator | IT Specialist | Project Manager
-      </p>
-      <div class="cta-buttons animate__animated animate__zoomIn animate__delay-1s">
-        <a href="#portfolio" class="btn">Explore My Work</a>
-        <a href="cv.html" class="btn">Download My CV</a>
-        <a href="store.html" class="btn">Visit My Store</a>
+      <div class="hero-text">
+        <h1 id="hero-title" class="glitch-effect">MASINGITA OTTIS MALULEKE</h1>
+        <div class="typewriter-container">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-subtitle">
+          Turning complex problems into elegant solutions
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">SQL</span>
+        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="#portfolio" class="btn btn-primary">
+          <span>Explore My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="cv.html" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i>
+          <span>Download CV</span>
+        </a>
+        <a href="store.html" class="btn btn-accent">
+          <i class="fas fa-store"></i>
+          <span>Visit Store</span>
+        </a>
       </div>
     </div>
-  </section>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <div>
+        <span class="scroll-text">Scroll Down</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Quick Links Section -->
-  <section class="quick-links">
-    <div class="card" data-tilt>
-      <h3><a href="portfolio.html"><i class="fas fa-briefcase"> </i> Portfolio</a></h3>
+<!-- Quick Links Section -->
+<section class="quick-links">
+  <div class="container">
+    <div class="cards-container">
+      <div class="card" data-type="portfolio">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Portfolio</h3>
+          <p>View my latest projects</p>
+          <a href="portfolio.html" class="card-link" aria-label="Go to Portfolio"></a>
+        </div>
+      </div>
+      
+      <div class="card" data-type="cv">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>CV & Certifications</h3>
+          <p>My experience & skills</p>
+          <a href="cv.html" class="card-link" aria-label="Go to CV & Certifications"></a>
+        </div>
+      </div>
+      
+      <div class="card" data-type="store">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Online Store</h3>
+          <p>Digital products & services</p>
+          <a href="store.html" class="card-link" aria-label="Go to Online Store"></a>
+        </div>
+      </div>
+      
+      <div class="card" data-type="blog">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fas fa-blog"></i>
+          </div>
+          <h3>Blog</h3>
+          <p>Thoughts & tutorials</p>
+          <a href="blog.html" class="card-link" aria-label="Go to Blog"></a>
+        </div>
+      </div>
+      
+      <div class="card" data-type="contact">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Contact Me</h3>
+          <p>Let's work together</p>
+          <a href="contact.html" class="card-link" aria-label="Go to Contact Me"></a>
+        </div>
+      </div>
     </div>
-    <div class="card" data-tilt>
-      <h3><a href="cv.html"><i class="fas fa-file-alt"></i> CV & Certifications</a></h3>
-    </div>
-    <div class="card" data-tilt>
-      <h3><a href="store.html"><i class="fas fa-store"></i> Online Store</a></h3>
-    </div>
-    <div class="card" data-tilt>
-      <h3><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></h3>
-    </div>
-    <div class="card" data-tilt>
-      <h3><a href="contact.html"><i class="fas fa-envelope"></i> Contact Me</a></h3>
-    </div>
-  </section>
+  </div>
+  
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
+</section>
 
-  <!-- About Me -->
-  <section class="about-me">
-    <div class="container">
-      <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
+  <!-- About Me Section -->
+<section class="about-me">
+  <div class="container">
+    <div class="profile-wrapper">
+      <div class="profile-image-container">
+        <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
+        <div class="profile-blob"></div>
+      </div>
       <div class="about-content">
-        <p>Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building
-          secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop
-          shop for a variety of IT needs!</p>
-        <a href="about.html" class="btn">Learn More About Me</a>
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
+        <div class="skills-container">
+          <span class="skill-tag">Software Development</span>
+          <span class="skill-tag">Cybersecurity</span>
+          <span class="skill-tag">Project Management</span>
+          <span class="skill-tag">Data Analysis</span>
+        </div>
+        <a href="about.html" class="btn">Learn More About Me <span class="btn-icon">→</span></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Skills and Technologies -->
   <section class="skills">
