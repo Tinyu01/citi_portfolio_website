@@ -75,6 +75,9 @@ a:hover {
   margin-top: 0px;
   transition: all var(--transition-speed);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
@@ -100,6 +103,8 @@ a:hover {
 
 .navbar-nav {
   margin-left: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-item {
@@ -421,7 +426,7 @@ body:not(.dark-mode) .footer {
 
 @media (min-width: 481px) and (max-width: 768px) {
   body {
-    font-size: 60px;
+    font-size: 16px;
   }
   .header {
     padding: 20px;
@@ -434,7 +439,7 @@ body:not(.dark-mode) .footer {
 }
 
 .navbar-brand-p {
-  margin-top:-8px;
+  margin-top:-10px;
   margin-left: -2%;
 }
 
@@ -491,6 +496,13 @@ body:not(.dark-mode) .footer {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin-top: 10px;
+    position: absolute;
+    top: 75px; /* Adjust based on your navbar height */
+    right: 0;
+    width: 100%;
+    background-color: var(--background-light);
+    z-index: 1;
+    flex-grow: 0;
   }
   
   body.dark-mode .navbar-collapse {
@@ -500,6 +512,7 @@ body:not(.dark-mode) .footer {
   .navbar-toggler {
     border: none;
     padding: 10px;
+    margin-left: auto;
   }
   
   .navbar-toggler:focus {
@@ -510,6 +523,19 @@ body:not(.dark-mode) .footer {
     margin: 10px 0;
   }
   
+  .navbar-nav {
+    flex-direction: column;
+    position: absolute;
+    top: 75px; /* Adjust based on your navbar height */
+    right: 0;
+    background-color: var(--background-light);
+    width: 100%;
+    display: none;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
@@ -604,3 +630,19 @@ body.dark-mode ::-webkit-scrollbar-track {
     flex-direction: column;
   }
 }
+
+/* JavaScript to handle the burger menu functionality */
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarNav = document.querySelector('.navbar-nav');
+
+  navbarToggler.addEventListener('click', function() {
+    navbarNav.classList.toggle('show');
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!navbarToggler.contains(event.target) && !navbarNav.contains(event.target)) {
+      navbarNav.classList.remove('show');
+    }
+  });
+});
