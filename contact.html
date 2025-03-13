@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - MASINGITA OTTIS MALULEKE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/contact.css">
   <link rel="icon" href="assets/FreelanceR_Logo.png" type="image/png" sizes="50x50">
@@ -70,8 +70,7 @@
             <a href="mailto:216135982@edu.vut.ac.za"><i class="fas fa-envelope"></i></a>
           </div>
           <div class="map mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.7841501681073!2d27.854188500000003!3d-26.203699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a10d33bd39cd%3A0xcd44e4b4538a7c3!2sThe%20Bram%20Fischer%20Multi-Purpose%20Centre!5e0!3m2!1sen!2sza!4v1741857008300!5m2!1sen!2sza" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div>
         </div>
       </div>
     </div>
@@ -79,6 +78,7 @@
 
   <!--Contact Form Script-->
 <script>
+  
   document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent page reload
 
@@ -92,18 +92,24 @@
         body: formData
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         statusDiv.innerText = "Message sent successfully! I will get back to you ASAP.";
+        statusDiv.className = "mt-3 success";
         form.reset();
 
         setTimeout(() => {
           statusDiv.innerText = "";
+          statusDiv.className = "mt-3";
         }, 3000);
       } else {
-        statusDiv.innerText = "Something went wrong. Please try again.";
+        statusDiv.innerText = data.message || "Something went wrong. Please try again.";
+        statusDiv.className = "mt-3 error";
       }
     } catch (error) {
       statusDiv.innerText = "Error: " + error.message;
+      statusDiv.className = "mt-3 error";
     }
   });
 
@@ -587,7 +593,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
   <script src="bootstrap/js/bootstrap.js"></script>
   <script src="bootstrap/js/jquery.js"></script>
