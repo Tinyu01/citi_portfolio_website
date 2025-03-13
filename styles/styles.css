@@ -1150,6 +1150,8 @@
   overflow: hidden;
   z-index: 1;
   transition: all 0.3s ease;
+  max-width: 800px; /* Adjusted max-width */
+  margin: 0 auto; /* Center the content */
 }
 
 .dark-mode .about-content {
@@ -1348,16 +1350,6 @@
   transform: translateX(5px);
 }
 
-.background-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
 /* Responsive Styles */
 @media (max-width: 992px) {
   .about-me {
@@ -1379,6 +1371,7 @@
   
   .about-content {
     padding: 15px; /* Adjusted padding */
+    max-width: 700px; /* Adjusted max-width */
   }
   
   .skills-container {
@@ -1415,6 +1408,7 @@
   
   .about-content {
     padding: 10px; /* Adjusted padding */
+    max-width: 600px; /* Adjusted max-width */
   }
   
   .skills-container {
@@ -1451,6 +1445,7 @@
   
   .about-content {
     padding: 8px; /* Adjusted padding */
+    max-width: 100%; /* Full width on small screens */
   }
   
   .skills-container {
