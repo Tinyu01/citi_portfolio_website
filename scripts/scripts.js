@@ -342,159 +342,253 @@ if (chatbotBody && chatbotInput && chatbotWindow && sendButton) {
   console.error('Chatbot elements not found in the DOM');
 }
 
-//quick links
+/// Vanilla tilt initialization
+document.addEventListener("DOMContentLoaded", function() {
+  VanillaTilt.init(document.querySelectorAll(".card"), {
+    max: 10,
+    speed: 300,
+    glare: true,
+    "max-glare": 0.2,
+  });
 
+  // Create particles
+  const particlesContainers = document.querySelectorAll('.particles');
+  
+  particlesContainers.forEach(container => {
+    for (let i = 0; i < 8; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random position
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      
+      // Random size
+      const size = Math.random() * 3 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random animation delay
+      particle.style.animationDelay = `${Math.random() * 3}s`;
+      
+      container.appendChild(particle);
+    }
+  });
+});
+
+// Wait for DOM content to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Theme toggle functionality
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
+  // Create particles for background
+  createParticles();
   
-  // Check for saved theme preference or default to 'light'
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  body.setAttribute('data-theme', savedTheme);
+  // Initialize skill progress bars with animation
+  initSkillBars();
   
-  themeToggle.addEventListener('click', function() {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  // Initialize typing effect
+  // If you want to keep the static text instead, remove this line
+  // initTypingEffect();
+  
+  // Apply 3D tilt effect to profile
+  applyTiltEffect();
+  
+  // Add intersection observer to animate elements when scrolled into view
+  setupIntersectionObserver();
+});
+
+// Create floating particles in the background
+function createParticles() {
+  const particlesContainer = document.querySelector('.background-particles');
+  const colors = [
+    'rgba(67, 97, 238, 0.3)',
+    'rgba(76, 201, 240, 0.3)',
+    'rgba(58, 12, 163, 0.3)',
+    'rgba(6, 214, 160, 0.3)'
+  ];
+  
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
     
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+    // Random properties
+    const size = Math.random() * 15 + 5;
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 20 + 10;
+    const color = colors[Math.floor(Math.random() * colors.length)];
     
-    // Add transition class for smooth theme change
-    body.classList.add('theme-transition');
-    setTimeout(() => {
-      body.classList.remove('theme-transition');
-    }, 500);
+    // Apply styles
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${posX}%`;
+    particle.style.top = `${posY}%`;
+    particle.style.background = color;
+    particle.style.opacity = Math.random() * 0.5 + 0.2;
+    
+    // Animation
+    particle.style.animation = `floatParticle ${duration}s linear ${delay}s infinite`;
+    
+    // Add to container
+    particlesContainer.appendChild(particle);
+  }
+  
+  // Add animation keyframes dynamically
+  const styleSheet = document.createElement('style');
+  styleSheet.innerHTML = `
+    @keyframes floatParticle {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(50px, -30px) rotate(90deg);
+      }
+      50% {
+        transform: translate(100px, 0) rotate(180deg);
+      }
+      75% {
+        transform: translate(50px, 30px) rotate(270deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+      }
+    }
+  `;
+  document.head.appendChild(styleSheet);
+}
+
+// Initialize skill progress bars with animation
+function initSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  
+  // Add animation to skill bars when the section is in view
+  skillBars.forEach(bar => {
+    // Get the width value from the style attribute
+    const width = bar.style.width;
+    // Initially set width to 0
+    bar.style.width = '0';
+    
+    // Store the target width as a data attribute
+    bar.dataset.width = width;
+  });
+}
+
+// Initialize typing effect (optional - can be removed if you prefer static text)
+function initTypingEffect() {
+  const typingElement = document.querySelector('.typing-effect');
+  const textToType = typingElement.textContent;
+  typingElement.textContent = '';
+  
+  let i = 0;
+  const typingInterval = setInterval(() => {
+    if (i < textToType.length) {
+      typingElement.textContent += textToType.charAt(i);
+      i++;
+    } else {
+      clearInterval(typingInterval);
+    }
+  }, 50);
+}
+
+// Apply 3D tilt effect to profile image
+function applyTiltEffect() {
+  const profileFrame = document.querySelector('.profile-frame');
+  
+  profileFrame.addEventListener('mousemove', (e) => {
+    const rect = profileFrame.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = (y - centerY) / 10;
+    const rotateY = -(x - centerX) / 10;
+    
+    profileFrame.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
   
-  // Card hover effects with vanilla JS (alternative to Tilt.js)
-  const cards = document.querySelectorAll('.card');
-  
-  cards.forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-      const rect = this.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const tiltX = (y - centerY) / 14;
-      const tiltY = (centerX - x) / 14;
-      
-      this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-10px)`;
-      
-      // Dynamic shadow effect
-      this.style.boxShadow = `
-        0 15px 35px rgba(0, 0, 0, 0.1),
-        ${(x - centerX) / 40}px ${(y - centerY) / 40}px 30px rgba(0, 0, 0, 0.05)
-      `;
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = '';
-      this.style.boxShadow = '';
-      
-      // Add transition for smooth return
-      this.style.transition = 'all 0.5s ease';
-      setTimeout(() => {
-        this.style.transition = '';
-      }, 500);
-    });
-    
-    // Add focus styles for accessibility
-    const cardLink = card.querySelector('.card-link');
-    cardLink.addEventListener('focus', function() {
-      card.classList.add('card-focused');
-    });
-    
-    cardLink.addEventListener('blur', function() {
-      card.classList.remove('card-focused');
-    });
+  profileFrame.addEventListener('mouseleave', () => {
+    profileFrame.style.transform = '';
+    // Restore the floating animation
+    profileFrame.style.animation = 'profileFloat 6s ease-in-out infinite';
   });
+}
+
+// Setup Intersection Observer to animate elements when scrolled into view
+function setupIntersectionObserver() {
+  const options = {
+    root: null, // Use viewport as root
+    rootMargin: '0px',
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  };
   
-  // Add intersection observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        if (entry.target.classList.contains('about-content')) {
+          // Animate skill bars
+          const skillBars = entry.target.querySelectorAll('.skill-progress');
+          skillBars.forEach(bar => {
+            setTimeout(() => {
+              bar.style.width = bar.dataset.width;
+            }, 300);
+          });
+        }
+        
+        // Add fadein class for animation
+        entry.target.classList.add('fade-in');
+        
+        // Stop observing after animation is triggered
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1
-  });
+  }, options);
   
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-});
+  // Observe elements
+  observer.observe(document.querySelector('.about-content'));
+  observer.observe(document.querySelector('.profile-image-container'));
+}
 
-// Theme Toggle Functionality
-document.addEventListener('DOMContentLoaded', function() {
-  // Check for saved theme preference or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
+// Handle theme toggle (assuming you have a theme toggle button elsewhere)
+// This connects to any existing theme toggle functionality
+function updateThemeSpecifics() {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  const root = document.documentElement;
   
-  // Apply saved theme
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
+  if (isDarkMode) {
+    root.style.setProperty('--skill-progress-gradient', 'linear-gradient(90deg, var(--accent-color), var(--secondary-color))');
+  } else {
+    root.style.setProperty('--skill-progress-gradient', 'linear-gradient(90deg, var(--primary-color), var(--accent-color))');
   }
-  
-  // Theme toggle functionality
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      // Toggle the dark-mode class
-      document.body.classList.toggle('dark-mode');
-      
-      // Save the current theme preference
-      const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-      localStorage.setItem('theme', currentTheme);
-      
-      // Add animation to profile elements
-      const profileImage = document.querySelector('.profile-image');
-      const profileBlob = document.querySelector('.profile-blob');
-      
-      // Apply animation classes
-      profileImage.classList.add('theme-transition');
-      profileBlob.classList.add('theme-transition');
-      
-      // Remove animation classes after transition
-      setTimeout(() => {
-        profileImage.classList.remove('theme-transition');
-        profileBlob.classList.remove('theme-transition');
-      }, 600);
-    });
-  }
-  
-  // Add hover animations for profile image
-  const profileImage = document.querySelector('.profile-image');
-  if (profileImage) {
-    profileImage.addEventListener('mouseover', function() {
-      const profileBlob = document.querySelector('.profile-blob');
-      profileBlob.style.transform = 'scale(1.1) rotate(10deg)';
-    });
-    
-    profileImage.addEventListener('mouseout', function() {
-      const profileBlob = document.querySelector('.profile-blob');
-      profileBlob.style.transform = 'scale(1) rotate(0deg)';
-    });
-  }
-});
+}
 
-// Additional animations for skills tags
-document.addEventListener('DOMContentLoaded', function() {
-  const skillTags = document.querySelectorAll('.skill-tag');
-  
-  skillTags.forEach((tag, index) => {
-    // Add staggered appearance animation on page load
-    tag.style.opacity = '0';
-    tag.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-      tag.style.transition = 'all 0.5s ease';
-      tag.style.opacity = '1';
-      tag.style.transform = 'translateY(0)';
-    }, 300 + (index * 100));
+// If a theme toggle exists elsewhere, connect to it
+const existingThemeToggle = document.getElementById('theme-toggle');
+if (existingThemeToggle) {
+  existingThemeToggle.addEventListener('click', () => {
+    setTimeout(updateThemeSpecifics, 100); // Short delay to ensure classList changes have applied
   });
-});
+}
+
+// Initial theme check
+updateThemeSpecifics();
+
+// Add CSS keyframes for fade-in animation
+const fadeInStyles = document.createElement('style');
+fadeInStyles.innerHTML = `
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+document.head.appendChild(fadeInStyles);

@@ -93,90 +93,101 @@
 <section class="quick-links">
   <div class="container">
     <div class="cards-container">
-      <div class="card" data-type="portfolio">
-        <div class="card-content">
-          <div class="icon-container">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <h3>Portfolio</h3>
-          <p>View my latest projects</p>
-          <a href="portfolio.html" class="card-link" aria-label="Go to Portfolio"></a>
-        </div>
+      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+        <div class="particles"></div>
+        <a href="portfolio.html" class="card-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Portfolio</span>
+        </a>
       </div>
-      
-      <div class="card" data-type="cv">
-        <div class="card-content">
-          <div class="icon-container">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <h3>CV & Certifications</h3>
-          <p>My experience & skills</p>
-          <a href="cv.html" class="card-link" aria-label="Go to CV & Certifications"></a>
-        </div>
+      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+        <div class="particles"></div>
+        <a href="cv.html" class="card-link">
+          <i class="fas fa-file-alt"></i>
+          <span>CV & Certifications</span>
+        </a>
       </div>
-      
-      <div class="card" data-type="store">
-        <div class="card-content">
-          <div class="icon-container">
-            <i class="fas fa-store"></i>
-          </div>
-          <h3>Online Store</h3>
-          <p>Digital products & services</p>
-          <a href="store.html" class="card-link" aria-label="Go to Online Store"></a>
-        </div>
+      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+        <div class="particles"></div>
+        <a href="store.html" class="card-link">
+          <i class="fas fa-store"></i>
+          <span>Online Store</span>
+        </a>
       </div>
-      
-      <div class="card" data-type="blog">
-        <div class="card-content">
-          <div class="icon-container">
-            <i class="fas fa-blog"></i>
-          </div>
-          <h3>Blog</h3>
-          <p>Thoughts & tutorials</p>
-          <a href="blog.html" class="card-link" aria-label="Go to Blog"></a>
-        </div>
+      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+        <div class="particles"></div>
+        <a href="blog.html" class="card-link">
+          <i class="fas fa-blog"></i>
+          <span>Blog</span>
+        </a>
       </div>
-      
-      <div class="card" data-type="contact">
-        <div class="card-content">
-          <div class="icon-container">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h3>Contact Me</h3>
-          <p>Let's work together</p>
-          <a href="contact.html" class="card-link" aria-label="Go to Contact Me"></a>
-        </div>
+      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+        <div class="particles"></div>
+        <a href="contact.html" class="card-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact Me</span>
+        </a>
       </div>
     </div>
   </div>
-  
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-  </button>
 </section>
 
-  <!-- About Me Section -->
+
+ <!-- About Me Section -->
 <section class="about-me">
   <div class="container">
+    <div class="about-header">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-accent"></div>
+    </div>
     <div class="profile-wrapper">
       <div class="profile-image-container">
-        <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
-        <div class="profile-blob"></div>
+        <div class="profile-frame">
+          <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
+          <div class="profile-glow"></div>
+        </div>
+        <div class="tech-icons">
+          <div class="tech-icon" data-tooltip="JavaScript"><i class="fab fa-js"></i></div>
+          <div class="tech-icon" data-tooltip="React"><i class="fab fa-react"></i></div>
+          <div class="tech-icon" data-tooltip="Python"><i class="fab fa-python"></i></div>
+          <div class="tech-icon" data-tooltip="Node.js"><i class="fab fa-node-js"></i></div>
+        </div>
       </div>
       <div class="about-content">
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">Hello! I'm an IT graduate with a burning desire to explore all things in tech, especially when building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
+        <div class="typing-effect">Hello! I'm an IT graduate with a burning desire to explore all things in tech</div>
+        <p class="about-text">I specialize in building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
         <div class="skills-container">
-          <span class="skill-tag">Software Development</span>
-          <span class="skill-tag">Cybersecurity</span>
-          <span class="skill-tag">Project Management</span>
-          <span class="skill-tag">Data Analysis</span>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <span class="skill-title">Software Development</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+            <span class="skill-title">Cybersecurity</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+            <span class="skill-title">Project Management</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+            <span class="skill-title">Data Analysis</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+          </div>
         </div>
-        <a href="about.html" class="btn">Learn More About Me <span class="btn-icon">→</span></a>
+        <a href="about.html" class="cta-button">
+          <span>Learn More About Me</span>
+          <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
+  <div class="background-particles"></div>
 </section>
 
   <!-- Skills and Technologies -->
