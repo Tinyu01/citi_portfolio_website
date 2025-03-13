@@ -442,15 +442,15 @@ body:not(.dark-mode) .footer {
   }
 
   .navbar-brand {
-    margin-left: 12%;
+    margin-left: 10%;
     margin-top: -1%;
     font: 0.5rem;
     font-weight: 700;
   }
   
   .navbar-brand-p {
-    margin-top:-55px;
-    margin-left: -12%;
+    margin-top:-50px;
+    margin-left: -14%;
     height: 1px;
     width: 1px;
   }
@@ -493,25 +493,29 @@ body:not(.dark-mode) .footer {
     padding: 20px;
   }
 
-.navbar-brand {
-  margin-left: 15%;
-  font: 2rem;
-  font-weight: 1000;
-}
+  .navbar-brand {
+    margin-left: 12%;
+    margin-top: -1%;
+    font: 2rem;
+    font-weight: 700;
+  }
+  
+  .navbar-brand-p {
+    margin-top:-13px;
+    margin-left: -5%;
+   
+  }
 
-.navbar-brand-p {
-  margin-top:-8px;
-  margin-left: -2%;
-}
+  .theme-toggle {
+    margin-right: 8%;
+    margin-top: -2%;
+  }
 
-.theme-toggle {
-  margin-right: 8%;
-  margin-top: -1.5%;
-}
+  .navbar-toggler {
+    margin-top: -2%;  
+    margin-right: -2%;
+  }
 
-.navbar-toggler {
-  margin-top: -1.5%;  
-}
 
 }
 
