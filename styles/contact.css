@@ -524,6 +524,30 @@ body:not(.dark-mode) .footer {
     font-size: 18px;
   }
   
+  .navbar-brand-p {
+    margin-top:-8px;
+    margin-left: -4%;
+    height: 50px;   
+    width: 50px;
+  }
+
+  .navbar-brand {
+    margin-left: 12%;
+    margin-top: -1%;
+    font: 2rem;
+    font-weight: 700;
+  }
+  
+  .navbar-toggler {
+    margin-top: -2%;  
+    margin-right: -1%;
+  }
+
+  .theme-toggle {
+    margin-right: 8%;
+    margin-top: -1%;
+  }
+
 }
 
 @media (min-width: 1025px) {
