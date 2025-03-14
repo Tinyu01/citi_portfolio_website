@@ -1861,83 +1861,68 @@
 /* Featured Projects */
 .featured-projects {
   padding: 50px 20px;
-  background: #2a2a2a;
+  background: var(--background-light);
   border-radius: 10px;
   margin: 10px auto;
   max-width: 1490px;
   max-height: 2000px;
-  box-shadow: 0 10px 30px rgb(48, 43, 43);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.dark-mode .featured-projects {
+  background: var(--background-dark);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .featured-projects h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2rem;
-  color: #fff;
+  color: var(--text-dark);
   font-weight: bold;
+  transition: color var (--transition-speed);
+}
+
+.dark-mode .featured-projects h2 {
+  color: var(--text-light);
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  background: #1a1a1a;
+  background: var(--background-light);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--transition-speed);
   margin: 0 auto;
-  max-width: 1000px; /* Increased width */
-  height: 650px; /* Increased height */
-  border: 1px solid #333;
+  max-width: 1000px;
+  height: 650px;
+  border: 1px solid #ccc;
 }
 
-.project-card .project-content a {
-  height: 45px;
-  text-align: center;
+.dark-mode .project-card {
+  background: var(--background-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-color: #333;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+}
+
+.dark-mode .project-card:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  border-color: #00aaff;
+  border-color: var(--accent-color);
 }
 
 .project-image {
   width: 100%;
   height: 300px;
   overflow: hidden;
-}
-
-.project-image.enlarged {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  z-index: 2000;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-image.enlarged img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.project-image.enlarged .close-enlarged {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
 }
 
 .project-card img {
@@ -1959,15 +1944,25 @@
 .project-content h4 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--text-dark);
   font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+.dark-mode .project-content h4 {
+  color: var(--text-light);
 }
 
 .project-content p {
   font-size: 1.1rem;
-  color: #ccc;
+  color: var(--text-dark);
   margin-bottom: 20px;
   line-height: 1.6;
+  transition: color var(--transition-speed);
+}
+
+.dark-mode .project-content p {
+  color: var(--text-light);
 }
 
 .tools-used {
@@ -1979,6 +1974,11 @@
   padding: 10px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
+  transition: background var(--transition-speed);
+}
+
+.dark-mode .tools-used {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .tools-used span {
@@ -1986,16 +1986,25 @@
   align-items: center;
   gap: 8px;
   font-size: 1rem;
-  color: #00aaff;
-  background: rgba(0, 170, 255, 0.1);
+  color: var(--primary-color);
+  background: rgba(67, 97, 238, 0.1);
   padding: 8px 15px;
   border-radius: 20px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, color var(--transition-speed);
+}
+
+.dark-mode .tools-used span {
+  color: var(--accent-color);
+  background: rgba(76, 201, 240, 0.1);
 }
 
 .tools-used span:hover {
-  background: rgba(0, 170, 255, 0.2);
+  background: rgba(67, 97, 238, 0.2);
   transform: scale(1.05);
+}
+
+.dark-mode .tools-used span:hover {
+  background: rgba(76, 201, 240, 0.2);
 }
 
 .tools-used i {
@@ -2003,8 +2012,8 @@
 }
 
 .project-content .btn {
-  background: #00aaff;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--text-light);
   padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
@@ -2014,20 +2023,34 @@
   margin-top: 10px;
 }
 
+.dark-mode .project-content .btn {
+  background: var(--accent-color);
+  color: var(--background-dark);
+}
+
 .project-content .btn:hover {
-  background: #ff0000c0;
-  color: #fff;
+  background: var(--secondary-color);
   transform: scale(1.05);
+}
+
+.dark-mode .project-content .btn:hover {
+  background: #3ab7dc;
 }
 
 /* Make the carousel controls more visible */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #00aaff;
+  background-color: var(--primary-color);
   border-radius: 50%;
   padding: 15px;
   width: 30px;
   height: 30px;
+  transition: background-color var(--transition-speed);
+}
+
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  background-color: var(--accent-color);
 }
 
 .carousel-control-prev,
@@ -2427,4 +2450,80 @@
 }
 .footer .container .social-links a i:hover {
   color: #080808;
+}
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background: var(--background-light);
+  transition: background var(--transition-speed);
+}
+
+.dark-mode .services {
+  background: var(--background-dark);
+}
+
+.services-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--background-light);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--transition-speed);
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.dark-mode .service-card {
+  background: var(--background-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .service-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.service-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  transition: color var(--transition-speed);
+}
+
+.dark-mode .service-card i {
+  color: var(--accent-color);
+}
+
+.service-card h4 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  transition: color var(--transition-speed);
+}
+
+.dark-mode .service-card h4 {
+  color: var(--text-light);
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: color var(--transition-speed);
+}
+
+.dark-mode .service-card p {
+  color: var(--text-light);
 }
