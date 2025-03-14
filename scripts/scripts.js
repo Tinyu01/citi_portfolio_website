@@ -945,19 +945,19 @@ document.addEventListener('DOMContentLoaded', function() {
       if (index < text.length) {
         typingElement.innerHTML += text.charAt(index);
         index++;
-        setTimeout(type, 100);
+        setTimeout(type, 100); // Adjust typing speed here
       } else {
         isAdding = false;
-        setTimeout(type, 2000); // Wait before starting to remove text
+        setTimeout(type, 2000); // Pause before deleting
       }
     } else {
       if (index > 0) {
         typingElement.innerHTML = text.substring(0, index - 1);
         index--;
-        setTimeout(type, 50);
+        setTimeout(type, 50); // Adjust deleting speed here
       } else {
         isAdding = true;
-        setTimeout(type, 500); // Wait before starting to add text again
+        setTimeout(type, 500); // Pause before typing again
       }
     }
   }
