@@ -933,3 +933,34 @@ document.addEventListener('DOMContentLoaded', function() {
     return descriptions[skill] || '';
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const typingElement = document.getElementById('typing-effect');
+  const text = "Hello! I'm an IT graduate with a burning desire to explore all things in tech";
+  let index = 0;
+  let isAdding = true;
+
+  function type() {
+    if (isAdding) {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      } else {
+        isAdding = false;
+        setTimeout(type, 2000); // Wait before starting to remove text
+      }
+    } else {
+      if (index > 0) {
+        typingElement.innerHTML = text.substring(0, index - 1);
+        index--;
+        setTimeout(type, 50);
+      } else {
+        isAdding = true;
+        setTimeout(type, 500); // Wait before starting to add text again
+      }
+    }
+  }
+
+  type();
+});

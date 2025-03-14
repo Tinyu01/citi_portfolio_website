@@ -135,7 +135,7 @@
 
 .dark-mode .theme-toggle:hover {
   background-color: rgba(76, 201, 240, 0.1);
-  color: var (--accent-color);
+  color: var(--accent-color);
 }
 
 /* Animation for icon switch */
@@ -1014,7 +1014,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
   padding: 20px;
   background: var(--background-light);
   border-radius: 10px;
@@ -1033,12 +1037,12 @@
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transition: transform var(--transition-speed);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow var(--transition-speed);
 }
 
 .profile-frame:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .profile-image {
@@ -1055,7 +1059,6 @@
   height: 100%;
   border-radius: 50%;
   box-shadow: 0 0 20px var(--accent-color);
-  opacity: 0.7;
   transition: box-shadow var(--transition-speed);
 }
 
@@ -1065,9 +1068,8 @@
 
 .tech-icons {
   display: flex;
-  justify-content: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .tech-icon {
@@ -1086,7 +1088,7 @@
 }
 
 .about-content {
-  margin-top: 20px;
+  text-align: center;
   color: var(--text-dark);
   transition: color var(--transition-speed);
 }
@@ -1121,13 +1123,13 @@
 .skills-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 15px;
 }
 
 .skill-card {
   background: var(--background-light);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
@@ -1161,11 +1163,11 @@
 }
 
 .skill-bar {
-  width: 100%;
-  height: 5px;
   background: var(--background-light);
   border-radius: 5px;
   overflow: hidden;
+  height: 10px;
+  margin-top: 5px;
   transition: background-color var(--transition-speed);
 }
 
@@ -1176,7 +1178,7 @@
 .skill-progress {
   height: 100%;
   background: var(--primary-color);
-  transition: background-color var(--transition-speed);
+  transition: background-color var(--transition-speed), width 0.6s ease;
 }
 
 .dark-mode .skill-progress {
@@ -1186,67 +1188,46 @@
 .cta-button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 5px;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color var(--transition-speed), transform var(--transition-speed);
-}
-
-.dark-mode .cta-button {
-  background: var(--accent-color);
+  transition: all var(--transition-speed);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2);
 }
 
 .cta-button:hover {
-  background: var(--highlight-color);
+  background-color: var(--secondary-color);
   transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
+}
+
+.dark-mode .cta-button {
+  background-color: var(--accent-color);
+  color: var(--background-dark);
+  box-shadow: 0 4px 6px rgba(76, 201, 240, 0.2);
+}
+
+.dark-mode .cta-button:hover {
+  background-color: #3ab7dc;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(76, 201, 240, 0.3);
 }
 
 .button-arrow {
-  margin-left: 10px;
-  transition: transform var(--transition-speed);
+  transition: transform 0.3s ease;
 }
 
 .cta-button:hover .button-arrow {
-  transform: translateX(5px);
-}
-
-.background-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.particle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: float 10s infinite ease-in-out;
-}
-
-.dark-mode .particle {
-  background: var(--accent-color);
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  transform: translateX(3px);
 }
 
 .profile-wrapper {
@@ -2838,4 +2819,118 @@
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between skill items */
+}
+
+.skill-item {
+  flex: 1 1 calc(33.333% - 20px); /* Adjust width and account for gap */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.skill-card {
+  background: var(--background-light);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.dark-mode .skill-card {
+  background: var(--background-dark);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-info h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: var(--text-dark);
+}
+
+.dark-mode .skill-info h3 {
+  color: var(--text-light);
+}
+
+.skill-level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background: var(--background-light);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color var(--transition-speed);
+}
+
+.dark-mode .progress-bar {
+  background: var(--background-dark);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: background-color var(--transition-speed);
+}
+
+.dark-mode .progress-fill {
+  background: var(--accent-color);
+}
+
+.level-text {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+.dark-mode .level-text {
+  color: var(--text-light);
+}
+
+/* View Full Portfolio Button */
+.view-full-portfolio {
+  text-align: center;
+  margin-top: 20px; /* Adjust this value to move the button lower */
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.dark-mode .cta-button {
+  background: var(--accent-color);
+}
+
+.cta-button:hover {
+  background: var(--highlight-color);
+  transform: translateY(-3px);
+}
+
+.button-arrow {
+  margin-left: 10px;
+  transition: transform var(--transition-speed);
+}
+
+.cta-button:hover .button-arrow {
+  transform: translateX(5px);
 }
