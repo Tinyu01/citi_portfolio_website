@@ -330,9 +330,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Optional: Add "View All Skills" button functionality
   const viewAllButton = document.querySelector('.view-all-skills .btn');
   if (viewAllButton) {
-    viewAllButton.addEventListener('click', function(e) {
+    viewAllButton.addEventListener('click', function() {
       // If you want to handle the click in JS instead of a normal link
-      // e.preventDefault();
       // Custom logic for viewing all skills
     });
   }
@@ -385,6 +384,30 @@ document.querySelectorAll('.project-image').forEach(imageContainer => {
     document.body.appendChild(enlargedDiv);
 
     enlargedDiv.querySelector('.close-enlarged').addEventListener('click', () => {
+      document.body.removeChild(enlargedDiv);
+    });
+  });
+});
+
+// Enlarge Project Image
+document.querySelectorAll('.project-image img').forEach(image => {
+  image.addEventListener('click', () => {
+    const enlargedDiv = document.createElement('div');
+    enlargedDiv.classList.add('enlarged-image-container');
+    enlargedDiv.innerHTML = `
+      <div class="enlarged-image-overlay"></div>
+      <div class="enlarged-image-content">
+        <img src="${image.src}" alt="${image.alt}">
+        <span class="close-enlarged">&times;</span>
+      </div>
+    `;
+    document.body.appendChild(enlargedDiv);
+
+    enlargedDiv.querySelector('.close-enlarged').addEventListener('click', () => {
+      document.body.removeChild(enlargedDiv);
+    });
+
+    enlargedDiv.querySelector('.enlarged-image-overlay').addEventListener('click', () => {
       document.body.removeChild(enlargedDiv);
     });
   });
