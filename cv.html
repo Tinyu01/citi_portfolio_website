@@ -1,31 +1,285 @@
-<!DOCTYPE html>
-<html lang="en">
+</span>
+  </div>
+  <div class="skill-description"></div>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV & Certifications - MASINGITA OTTIS MALULEKE</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Masingita Ottis Maluleke | Software Engineer & Digital Creator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-  <section class="cv">
-    <h1>CV & Certifications</h1>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Collins Chabane Local Municipality</h3>
-        <p>ICT Intern - March 2024 to Present</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Maltech Digital Solutions & Co.</h3>
-        <p>Freelance Software Engineer - March 2023 to Present</p>
+
+<body class="loading">
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="logo-animation">M<span class="accent">.</span>O<span class="accent">.</span>M</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!--Chatbot Scripts--->
-  <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/03/11/10/20250311102947-E1TPYEPC.js"></script>
+  <!-- Cursor Effects -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  
+  <!-- Background Elements -->
+  <div class="bg-grid"></div>
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
-  <script src="scripts.js"></script>
-  <script src="scripts/chatbot.js"></script>
-</body>
-</html>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <div class="logo-text">M<span class="accent">.</span>O<span class="accent">.</span>M</div>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#hero" class="nav-link active" data-section="hero"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about" class="nav-link" data-section="about"><span>About</span></a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link" data-section="skills"><span>Skills</span></a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link" data-section="experience"><span>Experience</span></a></li>
+            <li class="nav-item"><a href="#certifications" class="nav-link" data-section="certifications"><span>CV & Certs</span></a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-controls">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+          <button class="sound-toggle" aria-label="Toggle sound">
+            <svg class="sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <svg class="sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </button>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text" data-animation="fade-in">
+            <div class="greeting">
+              <span class="emoji">👋</span> Hello, I'm
+            </div>
+            <h1 class="name">Masingita Ottis <span class="highlight">Maluleke</span></h1>
+            <div class="title-wrapper">
+              <div class="title-slider">
+                <span>Software Engineer</span>
+                <span>UX Designer</span>
+                <span>Graphics Designer</span>
+                <span>Database Administrator</span>
+                <span>Project Manager</span>
+              </div>
+            </div>
+            <p class="bio">Building <span class="accent">innovative digital solutions</span> that solve real-world problems. Passionate about creating <span class="accent">secure</span>, <span class="accent">efficient</span>, and <span class="accent">user-centered</span> experiences.</p>
+            
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Let's Connect <i class="fas fa-arrow-right"></i></a>
+              <a href="#certifications" class="btn btn-secondary">View My CV</a>
+            </div>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-number" data-count="2">0</div>
+                <div class="stat-label">Years<br>Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Projects<br>Completed</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="5">0</div>
+                <div class="stat-label">Professional<br>Certifications</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-visual" data-animation="fade-in-delayed">
+            <div class="profile-container">
+              <div class="profile-border">
+                <img src="assets/images/profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
+              </div>
+              <div class="tech-icons">
+                <div class="tech-icon"><i class="fab fa-react"></i></div>
+                <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                <div class="tech-icon"><i class="fab fa-python"></i></div>
+                <div class="tech-icon"><i class="fab fa-figma"></i></div>
+                <div class="tech-icon"><i class="fas fa-database"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator" data-animation="fade-in-delayed">
+          <span>Scroll</span>
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header" data-animation="fade-up">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">My Journey & <span class="highlight">Vision</span></h2>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-visual" data-animation="fade-right">
+            <div class="code-block">
+              <pre><code>
+const developer = {
+  name: "Masingita Ottis",
+  role: "Software Engineer",
+  location: "South Africa",
+  expertise: [
+    "Web Development",
+    "UX Design",
+    "Database Management",
+    "Cybersecurity"
+  ],
+  skills: {
+    frontend: ["React", "JavaScript", "HTML/CSS"],
+    backend: ["Node.js", "Python", "RESTful APIs"],
+    database: ["MySQL", "MongoDB", "PostgreSQL"],
+    design: ["Figma", "Adobe XD", "UI/UX"]
+  },
+  mission: "Creating technology that matters"
+};
+              </code></pre>
+            </div>
+            
+            <div class="exp-counter">
+              <div class="counter-number">2+</div>
+              <div class="counter-text">Years of Experience</div>
+            </div>
+          </div>
+          
+          <div class="about-details" data-animation="fade-left">
+            <div class="about-story">
+              <p class="lead-text">I'm a multidisciplinary tech professional with a passion for building secure, efficient, and user-friendly digital solutions.</p>
+              
+              <p>As an IT graduate with experience in software development, cybersecurity, and project management, I've developed a diverse skill set that allows me to approach problems from multiple perspectives. My professional journey includes hands-on experience as an IT Technician and a valuable internship that exposed me to real-world ICT challenges.</p>
+              
+              <p>What sets me apart is my versatility and my commitment to continuous learning. I thrive in dynamic environments where I can apply my technical expertise while constantly expanding my knowledge and skills.</p>
+              
+              <blockquote class="quote">
+                <p>"Technology is most powerful when it empowers everyone."</p>
+              </blockquote>
+            </div>
+            
+            <div class="about-education">
+              <h3 class="subsection-title">Education <i class="fas fa-graduation-cap"></i></h3>
+              
+              <div class="education-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-details">
+                      <h4>Advanced Diploma in Information Technology</h4>
+                      <p>Vaal University of Technology</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-details">
+                      <h4>Higher National Diploma</h4>
+                      <p>Vaal University of Technology</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header" data-animation="fade-up">
+          <span class="section-tag">My Expertise</span>
+          <h2 class="section-title">Skills & <span class="highlight">Capabilities</span></h2>
+        </div>
+        
+        <div class="skills-content">
+          <div class="skills-tabs" data-animation="fade-up">
+            <button class="tab-btn active" data-target="development">
+              <i class="fas fa-code"></i>
+              <span>Development</span>
+            </button>
+            <button class="tab-btn" data-target="design">
+              <i class="fas fa-bezier-curve"></i>
+              <span>Design</span>
+            </button>
+            <button class="tab-btn" data-target="database">
+              <i class="fas fa-database"></i>
+              <span>Database</span>
+            </button>
+            <button class="tab-btn" data-target="security">
+              <i class="fas fa-shield-alt"></i>
+              <span>Security</span>
+            </button>
+            <button class="tab-btn" data-target="management">
+              <i class="fas fa-tasks"></i>
+              <span>Management</span>
+            </button>
+          </div>
+          
+          <div class="skills-container">
+            <div class="skills-tab-content active" id="development" data-animation="fade-up">
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fab fa-react"></i></div>
+                  <h3 class="skill-name">React</h3>
+                  <div class="skill-level">
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-description">
+                    <p>Component architecture, React hooks, state management</p>
+                  </div>
+                </div>
+                
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                  <h3 class="skill-name">Node.js</h3>
+                  <div class="skill-level">
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
