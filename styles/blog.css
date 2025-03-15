@@ -1,16 +1,18 @@
 :root {
   /* Core color palette - Neo-brutalist with bold accents */
-  --primary: #2d00f7;
-  --primary-light: #6a00f4;
-  --secondary: #ff006e;
-  --tertiary: #8900f2;
-  --dark: #161032;
+  
+  --primary-color: #4361ee;
+  --primary-light: #05600d;
+  --secondary: #4c00ff;
+  --tertiary: #4cc9f0;
   --light: #f8f9fa;
+  --dark: #161032;
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-300: #dee2e6;
   --gray-800: #343a40;
-  --success: #00c896;
+  --success: #06d6a0;
+  --transition-speed: 0.3s;
   
   /* Typography */
   --font-primary: 'Space Grotesk', 'Inter', system-ui, sans-serif;
