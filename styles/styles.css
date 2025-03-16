@@ -960,7 +960,7 @@
 /* About Me Section Styles */
 .about-me {
   position: relative;
-  padding: 60px 20px; /* Adjusted padding */
+  padding: 60px 20px;
   overflow: hidden;
   background: var(--background-light);
   transition: background-color var(--transition-speed);
@@ -977,12 +977,12 @@
 
 .about-header {
   text-align: center;
-  margin-bottom: 40px; /* Adjusted margin */
+  margin-bottom: 40px;
   position: relative;
 }
 
 .section-title {
-  font-size: 2.5rem; /* Adjusted font size */
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--primary-color);
@@ -1231,10 +1231,10 @@
 
 .profile-wrapper {
   display: flex;
-  flex-direction: column; /* Changed to column for better fit */
+  flex-direction: column; 
   align-items: center;
-  gap: 30px; /* Adjusted gap */
-  max-width: 800px; /* Adjusted max-width */
+  gap: 30px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -1246,8 +1246,8 @@
 }
 
 .profile-frame {
-  width: 200px; /* Adjusted width */
-  height: 200px; /* Adjusted height */
+  width: 200px;
+  height: 200px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -1304,8 +1304,8 @@
 }
 
 .tech-icon {
-  width: 40px; /* Adjusted size */
-  height: 40px; /* Adjusted size */
+  width: 40px;
+  height: 40px;
   background: var(--background-light);
   border-radius: 50%;
   display: flex;
@@ -1318,7 +1318,7 @@
 }
 
 .tech-icon i {
-  font-size: 18px; /* Adjusted font size */
+  font-size: 18px;
   color: var(--primary-color);
   transition: all 0.3s ease;
 }
@@ -2480,100 +2480,10 @@
   }
 }
 
-/* Chatbot Container */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.chatbot-icon {
-  background-color: #6C63FF;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-}
-
-.chatbot-window {
-  width: 300px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.chatbot-header {
-  background: #6C63FF;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chatbot-body {
-  flex-grow: 1;
-  padding: 10px;
-  overflow-y: auto;
-  background: #f8f9fa;
-  max-height: 300px;
-}
-
-.chatbot-message {
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 5px;
-  max-width: 80%;
-}
-
-.bot-message {
-  background: #e9ecef;
-  align-self: flex-start;
-}
-
-.user-message {
-  background: #6C63FF;
-  color: white;
-  align-self: flex-end;
-}
-
-.chatbot-input {
-  display: flex;
-  padding: 10px;
-  background: white;
-  border-top: 1px solid #e9ecef;
-}
-
-.chatbot-input input {
-  flex-grow: 1;
-  padding: 8px;
-  border: 1px solid #e9ecef;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.chatbot-input button {
-  background: #6C63FF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
 /* Skills and Technologies Section */
 .skills {
   padding: 60px 20px;
-  background: #2a2a2a;
+  background: var(--background-light);
   text-align: center;
   border-radius: 10px;
   margin: 10px auto;
@@ -2581,10 +2491,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode .skills {
+  background-color: var(--background-dark);
+}
+
 .skills h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
   color: #fff;
+}
+
+.skills .section-title {
+  color: var(--primary-color);
 }
 
 .skills-grid {
@@ -2598,7 +2516,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #1a1a1a;
+  background: var(--background-dark);
   padding: 20px;
   border-radius: 10px;
   width: 120px;
@@ -2606,6 +2524,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+.dark-mode .skill-item {
+  background: var(--background-light);
+}
+
 
 .skill-item img {
   width: 50px;
@@ -2630,7 +2553,7 @@
 }
 
 .skill-item.active {
-  background-color: #f0f0f0; /* Example active state styling */
+  background-color: #f0f0f0;
   transform: scale(1.05);
   border: 1px solid #ccc;
 }
@@ -2717,16 +2640,17 @@
   background: var(--background-light);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgb(7, 7, 7);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--transition-speed);
   text-align: center;
   flex: 1 1 300px;
   max-width: 300px;
 }
 
+
 .dark-mode .service-card {
   background: var(--background-dark);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.586);
 }
 
 .service-card:hover {
@@ -2837,8 +2761,17 @@
   background: var(--background-light);
   border-radius: 8px;
   padding: 10px;
+  width: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.dark-mode .skills .filter-tabs .filter-btn {
+  color: var(--text-light) ;
+}
+
+.skills .filter-tabs .filter-btn {
+  color: rgb(10, 10, 10);
 }
 
 .dark-mode .skill-card {
@@ -2939,7 +2872,19 @@
   color: var(--primary-color);
 }
 
-.dark-mode .testimonials .section-title {
-  color: var(--text-light);
+.testimonials .testimonial-card .testimonial-content {
+background-color: var(--secondary-color);
 }
 
+/* Featured Projects Section  Title Color*/
+.featured-projects .section-title {
+  color: var(--primary-color);
+}
+
+.dark-mode .featured-projects .section-title {
+  color: var(--primary-color);
+}
+
+.featured-projects .section-title {
+  color: var(--primary-color);
+}
