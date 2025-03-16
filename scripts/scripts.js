@@ -320,7 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
       nodejs: '#339933',
       aws: '#FF9900',
       docker: '#2496ED',
-      // Add more skills and their respective colors as needed
       default: 'var(--accent-color)'
     };
 
@@ -331,8 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const viewAllButton = document.querySelector('.view-all-skills .btn');
   if (viewAllButton) {
     viewAllButton.addEventListener('click', function() {
-      // If you want to handle the click in JS instead of a normal link
-      // Custom logic for viewing all skills
+      
     });
   }
 
@@ -347,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Optional: Add tooltip functionality if needed
       if (skillDescription) {
         item.setAttribute('title', skillDescription);
-        // Or implement a custom tooltip solution here
+        
       }
     });
   }
@@ -360,11 +358,22 @@ document.addEventListener('DOMContentLoaded', function() {
       nodejs: 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine for server-side applications.',
       aws: 'Amazon Web Services - a comprehensive cloud computing platform.',
       docker: 'A platform for developing, shipping, and running applications in containers.',
-      // Add more descriptions as needed
+      
     };
 
     return descriptions[skill] || '';
   }
+
+  // Collapse navbar on link click
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    });
+  });
 });
 
 // Carousel Initialization
@@ -430,7 +439,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
   if (name && email && subject && message) {
     alert('Thank you for your message!');
-    // Here you can add code to send the form data to your server
+    
   } else {
     alert('Please fill in all fields.');
   }
@@ -538,17 +547,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Wait for DOM content to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Create particles for background
+  
   createParticles();
   
   // Initialize skill progress bars with animation
   initSkillBars();
   
-  // Initialize typing effect
-  // If you want to keep the static text instead, remove this line
-  // initTypingEffect();
-  
-  // Apply 3D tilt effect to profile
   applyTiltEffect();
   
   // Add intersection observer to animate elements when scrolled into view
@@ -677,9 +681,9 @@ function applyTiltEffect() {
 // Setup Intersection Observer to animate elements when scrolled into view
 function setupIntersectionObserver() {
   const options = {
-    root: null, // Use viewport as root
+    root: null,
     rootMargin: '0px',
-    threshold: 0.2 // Trigger when 20% of the element is visible
+    threshold: 0.2
   };
   
   const observer = new IntersectionObserver((entries, observer) => {
@@ -726,7 +730,7 @@ function updateThemeSpecifics() {
 const existingThemeToggle = document.getElementById('theme-toggle');
 if (existingThemeToggle) {
   existingThemeToggle.addEventListener('click', () => {
-    setTimeout(updateThemeSpecifics, 100); // Short delay to ensure classList changes have applied
+    setTimeout(updateThemeSpecifics, 100); 
   });
 }
 
@@ -897,9 +901,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const viewAllButton = document.querySelector('.view-all-skills .btn');
   if (viewAllButton) {
     viewAllButton.addEventListener('click', function(e) {
-      // If you want to handle the click in JS instead of a normal link
-      // e.preventDefault();
-      // Custom logic for viewing all skills
+    
     });
   }
   

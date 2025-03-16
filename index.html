@@ -30,10 +30,13 @@
         <i class="fas fa-moon"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
+        <button class="btn-close btn-close-Black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-label="Close"></button>
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#home"><i class="fas fa-home"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html"><i class="fas fa-file-alt"></i> CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="assets/cv's/Full Stack Developer ( Software Engineer).pdf"><i class="fas fa-file-alt"></i> CV</a></li>
           <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store"></i> Store</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -42,284 +45,308 @@
     </div>
   </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 id="hero-title" class="glitch-effect">MASINGITA OTTIS MALULEKE</h1>
-        <div class="typewriter-container">
-          <span id="typewriter"></span><span class="cursor">|</span>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 id="hero-title" class="glitch-effect">MASINGITA OTTIS MALULEKE</h1>
+          <div class="typewriter-container">
+            <span id="typewriter"></span><span class="cursor">|</span>
+          </div>
+          <p class="hero-subtitle">
+            Turning complex problems into elegant solutions
+          </p>
+          <div class="tech-stack">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">SQL</span>
+          </div>
         </div>
-        <p class="hero-subtitle">
-          Turning complex problems into elegant solutions
-        </p>
-        <div class="tech-stack">
-          <span class="tech-badge">JavaScript</span>
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">Node.js</span>
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">SQL</span>
+        <div class="cta-buttons">
+          <a href="portfolio.html" class="btn btn-primary">
+            <span>Explore My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="assets/cv's/Full Stack Developer ( Software Engineer).pdf" class="btn btn-secondary" target="_blank">
+            <i class="fas fa-file-alt"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="store.html" class="btn btn-accent">
+            <i class="fas fa-store"></i>
+            <span>Visit Store</span>
+          </a>
         </div>
       </div>
-      <div class="cta-buttons">
-        <a href="portfolio.html" class="btn btn-primary">
-          <span>Explore My Work</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="assets/cv's/Full Stack Developer ( Software Engineer).pdf" class="btn btn-secondary" target="_blank" >
-          <i class="fas fa-file-alt"></i>
-          <span>Download CV</span>
-        </a>
-        <a href="store.html" class="btn btn-accent">
-          <i class="fas fa-store"></i>
-          <span>Visit Store</span>
-        </a>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div>
+          <span class="scroll-text">Scroll Down</span>
+        </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <div>
-        <span class="scroll-text">Scroll Down</span>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Quick Links Section -->
-<section class="quick-links">
-  <div class="container">
-    <div class="cards-container">
-      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
-        <div class="particles"></div>
-        <a href="portfolio.html" class="card-link">
-          <i class="fas fa-briefcase"></i>
-          <span>Portfolio</span>
-        </a>
-      </div>
-      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
-        <div class="particles"></div>
-        <a href="cv.html" class="card-link">
-          <i class="fas fa-file-alt"></i>
-          <span>CV & Certifications</span>
-        </a>
-      </div>
-      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
-        <div class="particles"></div>
-        <a href="store.html" class="card-link">
-          <i class="fas fa-store"></i>
-          <span>Online Store</span>
-        </a>
-      </div>
-      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
-        <div class="particles"></div>
-        <a href="blog.html" class="card-link">
-          <i class="fas fa-blog"></i>
-          <span>Blog</span>
-        </a>
-      </div>
-      <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
-        <div class="particles"></div>
-        <a href="contact.html" class="card-link">
-          <i class="fas fa-envelope"></i>
-          <span>Contact Me</span>
-        </a>
+  <!-- Quick Links Section -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="cards-container">
+        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="particles"></div>
+          <a href="portfolio.html" class="card-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Portfolio</span>
+          </a>
+        </div>
+        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="particles"></div>
+          <a href="cv.html" class="card-link">
+            <i class="fas fa-file-alt"></i>
+            <span>CV & Certifications</span>
+          </a>
+        </div>
+        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="particles"></div>
+          <a href="store.html" class="card-link">
+            <i class="fas fa-store"></i>
+            <span>Online Store</span>
+          </a>
+        </div>
+        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="particles"></div>
+          <a href="blog.html" class="card-link">
+            <i class="fas fa-blog"></i>
+            <span>Blog</span>
+          </a>
+        </div>
+        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="particles"></div>
+          <a href="contact.html" class="card-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
- <!-- About Me Section -->
-<section class="about-me">
-  <div class="container">
-    <div class="about-header">
-      <h2 class="section-title">About Me</h2>
-      <div class="section-accent"></div>
-    </div>
-    <div class="profile-wrapper">
-      <div class="profile-image-container">
-        <div class="profile-frame">
-          <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
-          <div class="profile-glow"></div>
+  <!-- About Me Section -->
+  <section class="about-me">
+    <div class="container">
+      <div class="about-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-accent"></div>
+      </div>
+      <div class="profile-wrapper">
+        <div class="profile-image-container">
+          <div class="profile-frame">
+            <img src="assets/Profile.jpg" alt="Masingita Ottis Maluleke" class="profile-image">
+            <div class="profile-glow"></div>
+          </div>
+          <div class="tech-icons">
+            <div class="tech-icon" data-tooltip="JavaScript"><i class="fab fa-js"></i></div>
+            <div class="tech-icon" data-tooltip="React"><i class="fab fa-react"></i></div>
+            <div class="tech-icon" data-tooltip="Python"><i class="fab fa-python"></i></div>
+            <div class="tech-icon" data-tooltip="Node.js"><i class="fab fa-node-js"></i></div>
+          </div>
         </div>
-        <div class="tech-icons">
-          <div class="tech-icon" data-tooltip="JavaScript"><i class="fab fa-js"></i></div>
-          <div class="tech-icon" data-tooltip="React"><i class="fab fa-react"></i></div>
-          <div class="tech-icon" data-tooltip="Python"><i class="fab fa-python"></i></div>
-          <div class="tech-icon" data-tooltip="Node.js"><i class="fab fa-node-js"></i></div>
+        <div class="about-content">
+          <div class="typing-effect" id="typing-effect">
+            Hello! I'm an IT graduate with a burning desire to explore all things in tech
+          </div>
+          <p class="about-text">I specialize in building secure software, managing projects from start to finish, and
+            keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
+          <div class="skills-container">
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <span class="skill-title">Software Development</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+              <span class="skill-title">Cybersecurity</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+              <span class="skill-title">Project Management</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+              <span class="skill-title">Data Analysis</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="cta-button">
+            <span>Learn More About Me</span>
+            <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path
+                d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z" />
+            </svg>
+          </a>
         </div>
       </div>
-      <div class="about-content">
-        <div class="typing-effect" id="typing-effect">Hello! I'm an IT graduate with a burning desire to explore all things in tech</div>
-        <div class="typing-effect" id="typing-effect"></div>
-        <p class="about-text">I specialize in building secure software, managing projects from start to finish, and keeping data safe. Think of me as your one-stop shop for a variety of IT needs!</p>
-        <div class="skills-container">
+    </div>
+    <div class="background-particles"></div>
+  </section>
+
+  <!-- Skills and Technologies -->
+  <section class="skills">
+    <div class="container">
+      <div class="about-header">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="section-accent"></div>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-item" data-skill="javascript" data-category="frontend">
           <div class="skill-card">
-            <div class="skill-icon"><i class="fas fa-code"></i></div>
-            <span class="skill-title">Software Development</span>
-            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-            <span class="skill-title">Cybersecurity</span>
-            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
-            <span class="skill-title">Project Management</span>
-            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            <span class="skill-title">Data Analysis</span>
-            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg"
+                alt="JavaScript">
+            </div>
+            <div class="skill-info">
+              <h3>JavaScript</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+                <span class="level-text">Advanced</span>
+              </div>
+            </div>
           </div>
         </div>
-        <a href="about.html" class="cta-button">
-          <span>Learn More About Me</span>
+
+        <div class="skill-item" data-skill="python" data-category="backend">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg"
+                alt="Python">
+            </div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+                <span class="level-text">Advanced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-skill="react" data-category="frontend">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg"
+                alt="React">
+            </div>
+            <div class="skill-info">
+              <h3>React</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 78%"></div>
+                </div>
+                <span class="level-text">Advanced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-skill="nodejs" data-category="backend">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg"
+                alt="NodeJS">
+            </div>
+            <div class="skill-info">
+              <h3>NodeJS</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 72%"></div>
+                </div>
+                <span class="level-text">Advanced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-skill="aws" data-category="devops">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg"
+                alt="Amazon Web Services">
+            </div>
+            <div class="skill-info">
+              <h3>AWS</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 50%"></div>
+                </div>
+                <span class="level-text">Intermediate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-item" data-skill="docker" data-category="devops">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg"
+                alt="Docker">
+            </div>
+            <div class="skill-info">
+              <h3>Docker</h3>
+              <div class="skill-level">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 40%"></div>
+                </div>
+                <span class="level-text">Intermediate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-skills">
+        <a href="skills.html" class="cta-button">
+          <span>View All Skills</span>
           <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z"/>
+            <path
+              d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z" />
           </svg>
         </a>
       </div>
     </div>
-  </div>
-  <div class="background-particles"></div>
-</section>
-
- <!-- Skills and Technologies -->
-<section class="skills">
-  <div class="container">
-    <div class="about-header">
-      <h2 class="section-title">Skills & Technologies</h2>
-      <div class="section-accent"></div>
-    </div>
-    
-    <div class="filter-tabs">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="frontend">Frontend</button>
-      <button class="filter-btn" data-filter="backend">Backend</button>
-      <button class="filter-btn" data-filter="devops">DevOps</button>
-    </div>
-    
-    <div class="skills-grid">
-      <div class="skill-item" data-skill="javascript" data-category="frontend">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JavaScript">
-          </div>
-          <div class="skill-info">
-            <h3>JavaScript</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 80%"></div>
-              </div>
-              <span class="level-text">Advanced</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-item" data-skill="python" data-category="backend">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python">
-          </div>
-          <div class="skill-info">
-            <h3>Python</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 85%"></div>
-              </div>
-              <span class="level-text">Advanced</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-item" data-skill="react" data-category="frontend">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React">
-          </div>
-          <div class="skill-info">
-            <h3>React</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 78%"></div>
-              </div>
-              <span class="level-text">Advanced</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-item" data-skill="nodejs" data-category="backend">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="NodeJS">
-          </div>
-          <div class="skill-info">
-            <h3>NodeJS</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 72%"></div>
-              </div>
-              <span class="level-text">Advanced</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-item" data-skill="aws" data-category="devops">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg" alt="Amazon Web Services">
-          </div>
-          <div class="skill-info">
-            <h3>AWS</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 50%"></div>
-              </div>
-              <span class="level-text">Intermediate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-item" data-skill="docker" data-category="devops">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker">
-          </div>
-          <div class="skill-info">
-            <h3>Docker</h3>
-            <div class="skill-level">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 40%"></div>
-              </div>
-              <span class="level-text">Intermediate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="view-all-skills">
-      <a href="skills.html" class="cta-button">
-        <span>View All Skills</span>
-        <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-          <path d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Featured Projects -->
   <section id="portfolio" class="featured-projects">
@@ -342,8 +369,10 @@
                 <span><i class="fab fa-css3-alt"></i> CSS</span>
                 <span><i class="fab fa-js"></i> JavaScript</span>
               </div>
-              <a href="https://tinyu01.github.io/citi_portfolio_website/" class="btn"><i class="fas fa-external-link-alt"></i>Live Demo</a>
-              <a href="https://github.com/Tinyu01/citi_portfolio_website" class="btn"><i class="fab fa-github"></i>View on GitHub</a>
+              <a href="https://tinyu01.github.io/citi_portfolio_website/" class="btn"><i
+                  class="fas fa-external-link-alt"></i>Live Demo</a>
+              <a href="https://github.com/Tinyu01/citi_portfolio_website" class="btn"><i class="fab fa-github"></i>View
+                on GitHub</a>
             </div>
           </div>
         </div>
@@ -360,8 +389,10 @@
                 <span><i class="fab fa-css3-alt"></i> CSS</span>
                 <span><i class="fab fa-python"></i> Python</span>
               </div>
-              <a href="https://ort1z.github.io/AirBnB_clone_v3//web_static/8-index.html" class="btn"><i class="fas fa-external-link-alt"></i>Live Demo</a>
-              <a href="https://github.com/Ort1z/AirBnB_clone" class="btn"><i class="fab fa-github"></i>View on GitHub</a>
+              <a href="https://ort1z.github.io/AirBnB_clone_v3//web_static/8-index.html" class="btn"><i
+                  class="fas fa-external-link-alt"></i>Live Demo</a>
+              <a href="https://github.com/Ort1z/AirBnB_clone" class="btn"><i class="fab fa-github"></i>View on
+                GitHub</a>
             </div>
           </div>
         </div>
@@ -379,8 +410,10 @@
                 <span><i class="fab fa-node-js"></i> Node.js</span>
                 <span><i class="fab fa-python"></i> Python</span>
               </div>
-              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i class="fas fa-external-link-alt"></i>Live Demo</a>
-              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i class="fab fa-github"></i>View on GitHub</a>
+              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i
+                  class="fas fa-external-link-alt"></i>Live Demo</a>
+              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i
+                  class="fab fa-github"></i>View on GitHub</a>
             </div>
           </div>
         </div>
@@ -396,58 +429,59 @@
       <a href="portfolio.html" class="cta-button">
         <span>View Full Portfolio</span>
         <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-          <path d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z"/>
+          <path
+            d="M13.172 12l-4.586-4.586a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.172 12z" />
         </svg>
       </a>
     </div>
   </section>
 
-<!-- Services -->
-<section id="services" class="services">
-  <div class="container">
-    <div class="about-header">
-      <h2 class="section-title">Services</h2>
-      <div class="section-accent"></div>
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="about-header">
+        <h2 class="section-title">Services</h2>
+        <div class="section-accent"></div>
+      </div>
+      <div class="services-content">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h4>Software Development</h4>
+          <p>Building secure and efficient software solutions tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Cybersecurity</h4>
+          <p>Ensuring the safety and security of your data and systems.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tasks"></i>
+          <h4>Project Management</h4>
+          <p>Managing projects from start to finish to ensure timely and successful delivery.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h4>Data Analysis</h4>
+          <p>Analyzing data to provide insights and drive decision-making.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h4>Graphic Design</h4>
+          <p>Creating visually appealing designs for your brand and marketing materials.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-bullhorn"></i>
+          <h4>Digital Marketing</h4>
+          <p>Promoting your business through effective online marketing strategies.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h4>UI/UX Design</h4>
+          <p>Designing user-friendly interfaces and experiences for your applications.</p>
+        </div>
+      </div>
     </div>
-    <div class="services-content">
-      <div class="service-card">
-        <i class="fas fa-code"></i>
-        <h4>Software Development</h4>
-        <p>Building secure and efficient software solutions tailored to your needs.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-shield-alt"></i>
-        <h4>Cybersecurity</h4>
-        <p>Ensuring the safety and security of your data and systems.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-tasks"></i>
-        <h4>Project Management</h4>
-        <p>Managing projects from start to finish to ensure timely and successful delivery.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-chart-line"></i>
-        <h4>Data Analysis</h4>
-        <p>Analyzing data to provide insights and drive decision-making.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-paint-brush"></i>
-        <h4>Graphic Design</h4>
-        <p>Creating visually appealing designs for your brand and marketing materials.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-bullhorn"></i>
-        <h4>Digital Marketing</h4>
-        <p>Promoting your business through effective online marketing strategies.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-pencil-ruler"></i>
-        <h4>UI/UX Design</h4>
-        <p>Designing user-friendly interfaces and experiences for your applications.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="testimonials">
@@ -503,7 +537,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer bg-dark text-white text-center py-4">
     <div class="container">
       <p>&copy; <span class="year"></span> <a href="https://tinyu01.github.io/citi_portfolio_website/">MASINGITA OTTIS
@@ -511,8 +544,10 @@
 
       <div class="social-links">
         <a href="https://www.linkedin.com/in/thefreelancer201/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Tinyu01" style="padding-left: 50px;"><i class="fab fa-github"></i></a>
-        <a href="https://x.com/TheFreelancer20"><i class="fab fa-twitter" style="padding-left: 50px;"></i></a>
+        <a href="https://github.com/Tinyu01" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/TheFreelancer20" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="216135982@edu.vut.ac.za"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/27738847449" class="social-link"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </footer>

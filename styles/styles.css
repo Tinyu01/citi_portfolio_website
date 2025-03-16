@@ -17,26 +17,24 @@
   --nav-shadow-dark: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+body {
+  background-color: var(--nav-bg-light);
+}
+
 .navbar {
   padding: 0.75rem 0;
   transition: all var(--transition-speed) ease;
   backdrop-filter: blur(10px);
-  box-shadow: var(--nav-shadow-light);
-  background-color: var(--nav-bg-light);
-  color: var(--text-dark); /* Change text color for better visibility */
-}
-
-/* Light theme (default) */
-.navbar {
-  background-color: var(--nav-bg-light);
-  color: var(--text-dark); /* Change text color for better visibility */
+  box-shadow: var(--nav-shadow-dark);
+  background-color: var(--nav-bg-dark);
+  color: var(--text-dark); 
 }
 
 /* Dark theme */
 .dark-mode .navbar {
   background-color: var(--nav-bg-dark);
   box-shadow: var(--nav-shadow-dark);
-  color: var(--text-light); /* Change text color for better visibility */
+  color: var(--text-dark);
 }
 
 .navbar-brand {
@@ -48,10 +46,6 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--primary-color);
-}
-
-.dark-mode .navbar-brand {
-  color: var(--accent-color);
 }
 
 .navbar-brand img {
@@ -75,7 +69,7 @@
 .nav-link {
   font-weight: 500;
   padding: 0.5rem 1rem;
-  color: var(--text-dark) !important;
+  color: var(--text-light) !important;
   transition: all var(--transition-speed) ease;
   border-radius: 6px;
   position: relative;
@@ -203,8 +197,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
-  
-  
+  .navbar-toggler .navbar-toggler-icon{
+    color: black;
+  }
 }
 
 /* Responsive adjustments */
@@ -243,9 +238,20 @@
   .theme-toggle {
     order: 2;
   }
+
+  .dark-mode .navbar-brand {
+    color: var(--accent-color);
+  }
+  
+  
+  .navbar-toggler .navbar-toggler-icon{
+    color: black;
+  }
+  
 }
 
 @media (min-width: 992px) {
+
   .navbar-collapse {
     justify-content: center !important;
   }
@@ -267,6 +273,15 @@
     margin-left: 15%;
   }
 
+  .dark-mode .navbar-brand {
+    color: var(--accent-color);
+  }
+  
+  .navbar-toggler .navbar-toggler-icon{
+    color: black;
+  }
+ 
+  
 }
 
 .navbar-toggler-icon {
@@ -2144,7 +2159,7 @@
 
 .dark-mode .project-card:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  border-color: var(--accent-color);
+  border-color: var (--accent-color);
 }
 
 .project-image {
@@ -2593,6 +2608,7 @@
 
 /* Footer */
 .footer {
+  background: var(--primary-color);
   margin-top: 50px;
 }
 
@@ -2611,6 +2627,11 @@
 }
 .footer .container .social-links a i:hover {
   color: #080808;
+}
+
+.social-links a {
+  margin: 0 20px;
+  transition: color 0.3s ease;
 }
 
 /* Services Section */
@@ -2887,4 +2908,8 @@ background-color: var(--secondary-color);
 
 .featured-projects .section-title {
   color: var(--primary-color);
+}
+
+.dark-mode .btn-close {
+  color: white;
 }
