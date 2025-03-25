@@ -374,6 +374,38 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Typewriter effect for typing-effect element
+  const typingEffectElement = document.getElementById('typing-effect');
+  if (typingEffectElement) {
+    const text = "Hello! I'm an IT graduate with a burning desire to explore all things in tech";
+    let index = 0;
+    let isAdding = true;
+
+    function type() {
+      if (isAdding) {
+        if (index < text.length) {
+          typingEffectElement.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 100); // Adjust typing speed here
+        } else {
+          isAdding = false;
+          setTimeout(type, 2000); // Pause before deleting
+        }
+      } else {
+        if (index > 0) {
+          typingEffectElement.innerHTML = text.substring(0, index - 1);
+          index--;
+          setTimeout(type, 50); // Adjust deleting speed here
+        } else {
+          isAdding = true;
+          setTimeout(type, 500); // Pause before typing again
+        }
+      }
+    }
+
+    type();
+  }
 });
 
 // Carousel Initialization
