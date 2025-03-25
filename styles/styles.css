@@ -2913,3 +2913,14 @@ background-color: var(--secondary-color);
 .dark-mode .btn-close {
   color: white;
 }
+
+.btn-close-Black {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .btn-close-Black {
+    display: block;
+  }
+}
+
