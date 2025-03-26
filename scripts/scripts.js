@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Typewriter effect for typing-effect element
   const typingEffectElement = document.getElementById('typing-effect');
   if (typingEffectElement) {
-    const text = "Hello! I'm an IT graduate with a burning desire to explore all things in tech";
+    const text = "Hi! I'm an IT graduate passionate about tech.";
     let index = 0;
     let isAdding = true;
 
