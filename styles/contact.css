@@ -78,7 +78,6 @@ a:hover {
   background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(76, 201, 240, 0.05) 100%);
   position: relative;
   overflow: hidden;
-  margin-top: 14%;
 }
 
 body.dark-mode .contact {
