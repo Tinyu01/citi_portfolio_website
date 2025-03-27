@@ -69,7 +69,7 @@ body {
 .nav-link {
   font-weight: 500;
   padding: 0.5rem 1rem;
-  color: var(--text-dark) !important;
+  color: var(--text-light) !important;
   transition: all var(--transition-speed) ease;
   border-radius: 6px;
   position: relative;
