@@ -332,9 +332,10 @@
       font-size: 1.8rem;
       font-weight: 700;
       background: linear-gradient(to right, var(--primary), var(--secondary));
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 1»?rem;
+      margin-bottom: 1rem;
     }
 
     .social-links {
@@ -350,10 +351,10 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: var(--card-bg);
-      color:%AF(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.2);
       transition: var(--transition);
       font-size: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -537,8 +538,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
-      Clyde: var(--transition);
+      transition: var(--transition);
     }
 
     .loader.hidden {
@@ -903,31 +903,33 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" style="background: #232347;"></footer>
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">MASINGITA OTTIS MALULEKE</div>
+        <div class="footer-logo" style="color: #fff; background: none; -webkit-text-fill-color: unset;">
+          MASINGITA OTTIS MALULEKE
+        </div>
 
         <div class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html" style="color: #fff;">Home</a>
+          <a href="projects.html" style="color: #fff;">Projects</a>
+          <a href="about.html" style="color: #fff;">About</a>
+          <a href="contact.html" style="color: #fff;">Contact</a>
         </div>
 
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/thefreelancer201/" class="social-link" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/thefreelancer201/" class="social-link" aria-label="LinkedIn" style="color: #fff; background: #0077b5;">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/Tinyu01" class="social-link" aria-label="GitHub">
+          <a href="https://github.com/Tinyu01" class="social-link" aria-label="GitHub" style="color: #fff; background: #333;">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://x.com/TheFreelancer20" class="social-link" aria-label="Twitter">
+          <a href="https://x.com/TheFreelancer20" class="social-link" aria-label="Twitter" style="color: #fff; background: #1da1f2;">
             <i class="fab fa-twitter"></i>
           </a>
         </div>
 
-        <p class="footer-text">© <span id="currentYear"></span> MASINGITA OTTIS MALULEKE. All rights reserved.</p>
+        <p class="footer-text" style="color: #e0e0e0;">© <span id="currentYear"></span> MASINGITA OTTIS MALULEKE. All rights reserved.</p>
       </div>
     </div>
   </footer>
