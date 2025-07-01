@@ -1168,6 +1168,31 @@ a.btn:hover::after {
       </form>
     </div>
     
+    <!-- Go Back Button (Large, Centered) -->
+    <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+      <button onclick="window.history.back()" style="
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: var(--light);
+      border: none;
+      padding: 22px 60px;
+      border-radius: 40px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(67, 97, 238, 0.18);
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      "
+      onmouseover="this.style.background='linear-gradient(90deg, var(--secondary), var(--tertiary))'; this.style.transform='translateY(-4px)';"
+      onmouseout="this.style.background='linear-gradient(90deg, var(--primary), var(--secondary))'; this.style.transform='none';"
+      >
+      <i class="fas fa-arrow-left" style="margin-right: 18px; font-size: 2rem;"></i>
+      Go Back
+      </button>
+    </div>
+
     <script src="scripts.js"></script>
     <script src="scripts/chatbot.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
