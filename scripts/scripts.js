@@ -99,12 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const roles = [
-      'Software Engineer',
-      'UX Designer',
-      'Graphics Designer',
-      'Database Administrator',
-      'IT Specialist',
-      'Project Manager'
+      'SOFTWARE ENGINEER',
+      'UX DESIGNER',
+      'GRAPHICS DESIGNER',
+      'DATABASE ADMINISTRATOR',
+      'IT SPECIALIST',
+      'PROJECT MANAGER'
     ];
     
     let roleIndex = 0;
@@ -430,27 +430,11 @@ document.querySelectorAll('.project-image').forEach(imageContainer => {
   });
 });
 
-// Enlarge Project Image
+// Enlarge Project Image - Disabled (no action on click)
 document.querySelectorAll('.project-image img').forEach(image => {
-  image.addEventListener('click', () => {
-    const enlargedDiv = document.createElement('div');
-    enlargedDiv.classList.add('enlarged-image-container');
-    enlargedDiv.innerHTML = `
-      <div class="enlarged-image-overlay"></div>
-      <div class="enlarged-image-content">
-        <img src="${image.src}" alt="${image.alt}">
-        <span class="close-enlarged">&times;</span>
-      </div>
-    `;
-    document.body.appendChild(enlargedDiv);
-
-    enlargedDiv.querySelector('.close-enlarged').addEventListener('click', () => {
-      document.body.removeChild(enlargedDiv);
-    });
-
-    enlargedDiv.querySelector('.enlarged-image-overlay').addEventListener('click', () => {
-      document.body.removeChild(enlargedDiv);
-    });
+  image.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Do nothing (disabled pop-up)
   });
 });
 
