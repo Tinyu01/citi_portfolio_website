@@ -275,8 +275,9 @@
       <h1 class="title">Coming Soon</h1>
       <p class="subtitle">Something amazing is on the way! Stay tuned for the launch of my online store in 2025.</p>
 
+
       <!-- Countdown Timer -->
-      <div class="countdown">
+     <!-- <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-number" id="days">00</span>
           <span class="countdown-label">Days</span>
@@ -293,8 +294,25 @@
           <span class="countdown-number" id="seconds">00</span>
           <span class="countdown-label">Seconds</span>
         </div>
-      </div>
-
+      </div> -->
+      <button onclick="window.history.back()" style="
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        color: var(--text-light);
+        border: none;
+        padding: 14px 36px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(67, 97, 238, 0.15);
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+        letter-spacing: 1px;
+      " onmouseover="this.style.background='linear-gradient(90deg, var(--secondary-color), var(--highlight-color))'; this.style.transform='translateY(-2px)';"
+         onmouseout="this.style.background='linear-gradient(90deg, var(--primary-color), var(--accent-color))'; this.style.transform='none';">
+        <i class="fas fa-arrow-left" style="margin-right: 10px;"></i>
+        Go Back
+      </button>
       <!-- Social Links -->
       <div class="social-links">
         <a href="https://www.linkedin.com/in/thefreelancer201/" class="social-link" aria-label="LinkedIn">
