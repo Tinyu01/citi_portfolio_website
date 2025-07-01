@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="assets/FreelanceR_Logo.png" type="image/png" sizes="50x50">
 </head>
+
 <body>
 
-  
+
   <header class="header">
     <div class="container">
       <h1 class="main-title">My Creative Portfolio</h1>
       <p class="subtitle">Showcasing my professional journey and skills</p>
+    </div>
+    <br>
+    <div>
+      <button onclick="window.history.back()" style="
+      background: linear-gradient(90deg, #4361ee, #f7971e);
+      color: #fff;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(67, 97, 238, 0.15);
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      letter-spacing: 1px;
+        "
+        onmouseover="this.style.background='linear-gradient(90deg, #3a86ff, #ffbe0b)'; this.style.transform='translateY(-2px)';"
+        onmouseout="this.style.background='linear-gradient(90deg, #4361ee, #f7971e)'; this.style.transform='none';">
+        <i class="fas fa-arrow-left" style="margin-right: 10px;"></i>
+        Go Back
+      </button>
     </div>
   </header>
 
@@ -35,7 +59,7 @@
           <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
       </div>
-      
+
       <div class="projects-grid">
         <!-- Software Engineering Projects -->
         <div class="project-card" data-category="software">
@@ -47,15 +71,18 @@
           </div>
           <div class="project-content">
             <h4>E-Commerce Platform</h4>
-            <p>Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.</p>
+            <p>Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Features include user
+              authentication, product management, and payment integration.</p>
             <div class="tools-used">
               <span><i class="fab fa-react"></i> React</span>
               <span><i class="fab fa-node-js"></i> Node.js</span>
               <span><i class="fas fa-database"></i> MongoDB</span>
             </div>
             <div class="project-buttons">
-              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i
+                  class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Ort1z/Full-Stack-E-Commerce-MERN-APP" class="btn"><i
+                  class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
@@ -76,7 +103,8 @@
               <span><i class="fab fa-python"></i> Python</span>
             </div>
             <div class="project-buttons">
-              <a href="https://ort1z.github.io/AirBnB_clone_v3//web_static/8-index.html" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://ort1z.github.io/AirBnB_clone_v3//web_static/8-index.html" class="btn"><i
+                  class="fas fa-external-link-alt"></i> Live Demo</a>
               <a href="https://github.com/Ort1z/AirBnB_clone" class="btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
@@ -95,10 +123,11 @@
             <div class="tools-used">
               <span><i class="fab fa-html5"></i> HTML</span>
               <span><i class="fab fa-css3-alt"></i> CSS</span>
-                <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
             </div>
             <div class="project-buttons">
-              <a href="https://tinyu01.github.io/Stopwatch/" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://tinyu01.github.io/Stopwatch/" class="btn"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
               <a href="https://github.com/Tinyu01/Stopwatch" class="btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
@@ -113,14 +142,16 @@
           </div>
           <div class="project-content">
             <h4>Stop Watch</h4>
-            <p>A functional stopwatch application that allows users to start, stop, and reset time tracking with precision.</p>
+            <p>A functional stopwatch application that allows users to start, stop, and reset time tracking with
+              precision.</p>
             <div class="tools-used">
               <span><i class="fab fa-html5"></i> HTML</span>
               <span><i class="fab fa-css3-alt"></i> CSS</span>
-                <span><i class="fab fa-js"></i> JavaScript</span>
+              <span><i class="fab fa-js"></i> JavaScript</span>
             </div>
             <div class="project-buttons">
-              <a href="https://tinyu01.github.io/Stopwatch/" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://tinyu01.github.io/Stopwatch/" class="btn"><i class="fas fa-external-link-alt"></i> Live
+                Demo</a>
               <a href="https://github.com/Tinyu01/Stopwatch" class="btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
@@ -158,14 +189,16 @@
           </div>
           <div class="project-content">
             <h4>Collins Chabane Local Municipality Landingpage</h4>
-            <p>Designed a comprehensive website for a local municipality, including logos, menus,banners and social media graphics.</p>
+            <p>Designed a comprehensive website for a local municipality, including logos, menus,banners and social
+              media graphics.</p>
             <div class="tools-used">
               <span><i class="fab fa-adobe"></i> Photoshop</span>
               <span><i class="fab fa-figma"></i> Figma</span>
               <span><i class="fas fa-palette"></i> Canva</span>
             </div>
             <div class="project-buttons">
-              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=152-2581" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=152-2581"
+                class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
             </div>
           </div>
         </div>
@@ -179,14 +212,16 @@
           </div>
           <div class="project-content">
             <h4>Collins Chabane Local Municipality Cantact page</h4>
-            <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user conversion.</p>
+            <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user
+              conversion.</p>
             <div class="tools-used">
               <span><i class="fab fa-figma"></i> Figma</span>
               <span><i class="fas fa-mobile-alt"></i> Responsive</span>
               <span><i class="fas fa-paint-brush"></i> Canva</span>
             </div>
             <div class="project-buttons">
-              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=202-5291" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=202-5291"
+                class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
             </div>
           </div>
         </div>
@@ -200,20 +235,22 @@
           </div>
           <div class="project-content">
             <h4>Collins Chabane Local Municipality Newa page</h4>
-            <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user conversion.</p>
+            <p>Created a user-friendly interface for an e-commerce platform, resulting in a 15% increase in user
+              conversion.</p>
             <div class="tools-used">
               <span><i class="fab fa-figma"></i> Figma</span>
               <span><i class="fas fa-mobile-alt"></i> Responsive</span>
               <span><i class="fas fa-paint-brush"></i> Canva</span>
             </div>
             <div class="project-buttons">
-              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=419-1409" class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
+              <a href="https://www.figma.com/proto/e8VGdz8qPF6EgPURf240L0/Collins-Website?node-id=419-1409"
+                class="btn"><i class="fas fa-external-link-alt"></i> View Case Study</a>
             </div>
           </div>
         </div>
 
         <!-- Database Administration Projects -->
-        <div class="project-card" data-category="database">   
+        <div class="project-card" data-category="database">
           <div class="project-image">
             <img src="project5.jpg" alt="Database Optimization">
             <div class="project-overlay">
@@ -222,7 +259,8 @@
           </div>
           <div class="project-content">
             <h4>Database Optimization</h4>
-            <p>Optimized a large-scale database system, reducing query response time by 30% and improving overall performance.</p>
+            <p>Optimized a large-scale database system, reducing query response time by 30% and improving overall
+              performance.</p>
             <div class="tools-used">
               <span><i class="fas fa-database"></i> SQL</span>
               <span><i class="fas fa-server"></i> PostgreSQL</span>
@@ -281,6 +319,31 @@
     </div>
   </section>
 
+  <!-- Go Back Button (Large, Centered) -->
+   <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+    <button onclick="window.history.back()" style="
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #fff;
+    border: none;
+    padding: 22px 60px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(30, 60, 114, 0.18);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    "
+    onmouseover="this.style.background='linear-gradient(90deg, #2a5298, #1e90ff)'; this.style.transform='translateY(-4px)';"
+    onmouseout="this.style.background='linear-gradient(90deg, #1e3c72, #2a5298)'; this.style.transform='none';"
+    >
+    <i class="fas fa-arrow-left" style="margin-right: 18px; font-size: 2rem;"></i>
+    Go Back
+    </button>
+   </div>
+
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 MASINGITA OTTIS MALULEKE. All Rights Reserved.</p>
@@ -307,4 +370,5 @@
 
   <script src="scripts/portfolio.js"></script>
 </body>
+
 </html>
