@@ -109,6 +109,7 @@ h1 {
   letter-spacing: -1px;
   background: linear-gradient(to right, var(--primary), var(--tertiary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: var(--space-xl);
   position: relative;
@@ -779,6 +780,7 @@ a.btn:hover::after {
   h1 {
     background: linear-gradient(to right, #8900f2, #6a00f4);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   

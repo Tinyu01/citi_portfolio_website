@@ -2847,6 +2847,7 @@ body.dark-theme .social-link {
   position: relative;
   background: linear-gradient(90deg, var(--text-light), var(--accent-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform var(--transition-speed);
 }
