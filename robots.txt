@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://masingitaottis.github.io/citi_portfolio_website/sitemap.xml

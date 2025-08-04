@@ -17,13 +17,13 @@ Welcome to my professional portfolio website! This project showcases my skills, 
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript, React.js
-- **Styling**: Tailwind CSS or Material-UI
+- **Frontend**: HTML, CSS, JavaScript
+- **Styling**: CSS
 - **Backend**: Node.js with Express.js
 - **Database**: MongoDB (with Mongoose for schema modeling)
 - **Authentication**: JWT (JSON Web Tokens)
 - **Payment Gateway**: Stripe or PayPal
-- **Hosting**: Vercel (frontend) and Render/Heroku (backend)
+- **Hosting**: Github Pages (frontend) and Render/Heroku (backend)
 
 ## 🎨 Design & Styling
 
@@ -61,6 +61,14 @@ portfolio-website/
 │   └── ...
 └── README.md               # Project Documentation
 ```
+
+## Installation & Usage
+1. Clone the repository:
+   ```
+   git clone https://github.com/Tinyu01/citi_portfolio_website.git
+   ```
+
+2. Open the project folder and launch `index.html` in your browser
 
 ## 🔧 Development Workflow
 
